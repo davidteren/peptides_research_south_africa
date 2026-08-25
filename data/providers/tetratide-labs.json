@@ -1,0 +1,30 @@
+{
+  "id": "tetratide-labs",
+  "schema_version": "1.0.0",
+  "name": "Tetratide Labs",
+  "kind": "research_storefront",
+  "website": "https://www.tetratidelabs.co.za",
+  "city": "Johannesburg",
+  "province": "Gauteng",
+  "country": "ZA",
+  "ships_domestically": true,
+  "ships_from": "Johannesburg",
+  "cold_chain": null,
+  "currency": "ZAR",
+  "prescription_required": "no",
+  "listing_posture": "research_use_only",
+  "accepts_eft": null,
+  "notes": "Site states Johannesburg stock location and Courier Guy. Public cart seen on 2026-08-25. No prescription step seen. Classification only, not an endorsement.",
+  "status": "active",
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "grok-scout",
+  "sources": [
+    {
+      "url": "https://www.tetratidelabs.co.za",
+      "title": "Tetratide Labs homepage",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

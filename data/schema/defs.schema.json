@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://peptides-research-south-africa.local/schema/defs.schema.json",
+  "title": "Shared catalog definitions",
+  "$defs": {
+    "kebab_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "minLength": 2
+    },
+    "iso_date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["seen_live", "partial", "unverified", "rumour"]
+    },
+    "source_kind": {
+      "type": "string",
+      "enum": ["regulator", "primary_literature", "review", "vendor", "encyclopedia", "news"]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "title", "accessed_at", "kind"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "title": { "type": "string", "minLength": 1 },
+        "accessed_at": { "$ref": "#/$defs/iso_date" },
+        "kind": { "$ref": "#/$defs/source_kind" },
+        "quote": { "type": "string" },
+        "pmid": { "type": "string" },
+        "license": { "type": "string" }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "route": {
+      "type": "string",
+      "enum": ["injectable_subq", "injectable_im", "nasal", "oral", "topical", "other"]
+    },
+    "form": {
+      "type": "string",
+      "enum": [
+        "lyophilized_vial",
+        "prefilled_pen",
+        "cartridge",
+        "nasal_spray",
+        "capsule",
+        "tablet",
+        "powder",
+        "topical",
+        "blend"
+      ]
+    },
+    "evidence_grade": {
+      "type": "string",
+      "enum": ["anecdotal", "preclinical", "early_human", "registered_medicine"]
+    },
+    "compound_class": {
+      "type": "string",
+      "enum": [
+        "healing",
+        "ghrh",
+        "secretagogue",
+        "glp1_metabolic",
+        "melanocortin",
+        "nootropic",
+        "copper",
+        "other"
+      ]
+    },
+    "compound_category": {
+      "type": "string",
+      "enum": [
+        "peptide",
+        "nootropic",
+        "glp1",
+        "hormone_secretagogue",
+        "copper_peptide",
+        "other"
+      ]
+    },
+    "record_base": {
+      "type": "object",
+      "required": [
+        "id",
+        "schema_version",
+        "last_reviewed_at",
+        "reviewer",
+        "sources",
+        "confidence"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/kebab_id" },
+        "schema_version": { "$ref": "#/$defs/schema_version" },
+        "last_reviewed_at": { "$ref": "#/$defs/iso_date" },
+        "reviewer": { "type": "string", "minLength": 1 },
+        "sources": { "$ref": "#/$defs/sources" },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    }
+  }
+}

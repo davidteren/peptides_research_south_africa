@@ -1,0 +1,30 @@
+{
+  "id": "the-clinic",
+  "schema_version": "1.0.0",
+  "name": "The Clinic",
+  "kind": "research_storefront",
+  "website": "https://www.the-clinic.co.za",
+  "city": null,
+  "province": null,
+  "country": "ZA",
+  "ships_domestically": true,
+  "ships_from": "South Africa (city not on product page)",
+  "cold_chain": null,
+  "currency": "ZAR",
+  "prescription_required": "no",
+  "listing_posture": "research_use_only",
+  "accepts_eft": null,
+  "notes": "Account required to see prices. How to Order page showed no medical-script step on 2026-08-25. City not on product page. Classification only, not an endorsement.",
+  "status": "active",
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "grok-scout",
+  "sources": [
+    {
+      "url": "https://www.the-clinic.co.za",
+      "title": "The Clinic homepage",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

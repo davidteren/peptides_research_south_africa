@@ -1,0 +1,67 @@
+{
+  "id": "example-compound",
+  "schema_version": "1.0.0",
+  "name": "Example compound",
+  "inn": null,
+  "aliases": [],
+  "class": "other",
+  "categories": ["other"],
+  "tags": [],
+  "cas": null,
+  "sequence": null,
+  "summary": "Neutral, cited description of what this compound is. Do not copy vendor marketing.",
+  "research_uses": [],
+  "reported_protocols": [],
+  "routes_studied": [],
+  "forms": [],
+  "evidence_grade": "anecdotal",
+  "sahpra": {
+    "registered_medicine": null,
+    "registration_numbers": [],
+    "schedule": null,
+    "on_unregistered_warning_list": false,
+    "notes": "",
+    "verified_on": "2026-08-25",
+    "sources": [
+      {
+        "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+        "title": "SAHPRA peptide products public information",
+        "accessed_at": "2026-08-25",
+        "kind": "regulator"
+      }
+    ]
+  },
+  "wada": {
+    "prohibited": false,
+    "class": null,
+    "list_year": 2026,
+    "notes": "",
+    "verified_on": "2026-08-25",
+    "sources": [
+      {
+        "url": "https://www.wada-ama.org/en/prohibited-list",
+        "title": "WADA Prohibited List",
+        "accessed_at": "2026-08-25",
+        "kind": "regulator"
+      }
+    ]
+  },
+  "storage": {
+    "lyophilized": "",
+    "reconstituted": "",
+    "cold_chain": false
+  },
+  "stack_pair_notes": [],
+  "related_compound_ids": [],
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "template",
+  "sources": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "title": "Replace with a primary source before publish",
+      "accessed_at": "2026-08-25",
+      "kind": "primary_literature"
+    }
+  ],
+  "confidence": "unverified"
+}

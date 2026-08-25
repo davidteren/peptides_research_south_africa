@@ -1,0 +1,30 @@
+{
+  "id": "example-provider",
+  "schema_version": "1.0.0",
+  "name": "Example provider",
+  "kind": "unknown",
+  "website": "https://example.co.za",
+  "city": null,
+  "province": null,
+  "country": "ZA",
+  "ships_domestically": null,
+  "ships_from": null,
+  "cold_chain": null,
+  "currency": "ZAR",
+  "prescription_required": "unknown",
+  "listing_posture": "unknown",
+  "accepts_eft": null,
+  "notes": "",
+  "status": "active",
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "template",
+  "sources": [
+    {
+      "url": "https://example.co.za",
+      "title": "Replace with the live homepage",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "unverified"
+}

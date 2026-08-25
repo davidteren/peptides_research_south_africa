@@ -1,0 +1,30 @@
+{
+  "id": "neuroactive",
+  "schema_version": "1.0.0",
+  "name": "NeuroActive",
+  "kind": "nootropic_retailer",
+  "website": "https://neuroactive.co.za",
+  "city": null,
+  "province": null,
+  "country": "ZA",
+  "ships_domestically": true,
+  "ships_from": "South Africa (city not on homepage)",
+  "cold_chain": false,
+  "currency": "ZAR",
+  "prescription_required": "no",
+  "listing_posture": "food_supplement",
+  "accepts_eft": null,
+  "notes": "Oral nootropics and supplements. No injectables on homepage on 2026-08-25. Sitemap also seen on zanootropics.co.za. Classification only, not an endorsement.",
+  "status": "active",
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "grok-scout",
+  "sources": [
+    {
+      "url": "https://neuroactive.co.za",
+      "title": "NeuroActive homepage",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

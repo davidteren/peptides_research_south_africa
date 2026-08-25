@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://peptides-research-south-africa.local/schema/provider.schema.json",
+  "title": "Provider record",
+  "description": "A South Africa-relevant supplier, clinic, compounding pharmacy, or retailer. Classification, not an endorsement.",
+  "allOf": [
+    { "$ref": "defs.schema.json#/$defs/record_base" }
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "schema_version",
+    "name",
+    "kind",
+    "website",
+    "country",
+    "currency",
+    "prescription_required",
+    "listing_posture",
+    "status",
+    "last_reviewed_at",
+    "reviewer",
+    "sources",
+    "confidence"
+  ],
+  "properties": {
+    "id": { "$ref": "defs.schema.json#/$defs/kebab_id" },
+    "schema_version": { "$ref": "defs.schema.json#/$defs/schema_version" },
+    "name": { "type": "string", "minLength": 1 },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "research_storefront",
+        "compounding_pharmacy",
+        "clinic",
+        "nootropic_retailer",
+        "marketplace",
+        "b2b",
+        "international",
+        "unknown"
+      ]
+    },
+    "website": { "type": "string", "format": "uri" },
+    "city": { "type": ["string", "null"] },
+    "province": { "type": ["string", "null"] },
+    "country": { "type": "string", "minLength": 2 },
+    "ships_domestically": { "type": ["boolean", "null"] },
+    "ships_from": { "type": ["string", "null"] },
+    "cold_chain": { "type": ["boolean", "null"] },
+    "currency": { "type": "string", "const": "ZAR" },
+    "prescription_required": {
+      "type": "string",
+      "enum": ["yes", "no", "practitioner_only", "unknown"]
+    },
+    "listing_posture": {
+      "type": "string",
+      "enum": [
+        "research_use_only",
+        "compounded_on_script",
+        "food_supplement",
+        "clinic_protocol",
+        "unknown"
+      ]
+    },
+    "accepts_eft": { "type": ["boolean", "null"] },
+    "notes": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["active", "down", "excluded"]
+    },
+    "last_reviewed_at": { "$ref": "defs.schema.json#/$defs/iso_date" },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "sources": { "$ref": "defs.schema.json#/$defs/sources" },
+    "confidence": { "$ref": "defs.schema.json#/$defs/confidence" }
+  }
+}

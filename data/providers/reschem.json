@@ -1,0 +1,30 @@
+{
+  "id": "reschem",
+  "schema_version": "1.0.0",
+  "name": "Reschem",
+  "kind": "research_storefront",
+  "website": "https://reschem.co.za",
+  "city": "Cape Town",
+  "province": "Western Cape",
+  "country": "ZA",
+  "ships_domestically": true,
+  "ships_from": "Paarden Eiland, Cape Town",
+  "cold_chain": null,
+  "currency": "ZAR",
+  "prescription_required": "no",
+  "listing_posture": "research_use_only",
+  "accepts_eft": true,
+  "notes": "Public checkout seen on 2026-08-25. Contact page lists Paarden Eiland. No prescription step seen. Classification only, not an endorsement.",
+  "status": "active",
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "grok-scout",
+  "sources": [
+    {
+      "url": "https://reschem.co.za",
+      "title": "Reschem homepage",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

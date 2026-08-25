@@ -1,0 +1,32 @@
+{
+  "id": "example-provider-example-compound-capsule-10mg",
+  "schema_version": "1.0.0",
+  "compound_id": "example-compound",
+  "provider_id": "example-provider",
+  "product_url": "https://example.co.za/product",
+  "title_on_page": "Verbatim shop title",
+  "form": "capsule",
+  "route": "oral",
+  "strength": "10 mg",
+  "pack_size": null,
+  "price_zar": null,
+  "price_checked_on": null,
+  "price_visible_without_login": true,
+  "in_stock": null,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": null,
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "template",
+  "sources": [
+    {
+      "url": "https://example.co.za/product",
+      "title": "Replace with the live product page",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "unverified"
+}

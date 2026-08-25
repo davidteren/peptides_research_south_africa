@@ -1,0 +1,30 @@
+{
+  "id": "alphahuman",
+  "schema_version": "1.0.0",
+  "name": "AlphaHuman",
+  "kind": "clinic",
+  "website": "https://alphahuman.co.za/pages/peptides",
+  "city": null,
+  "province": null,
+  "country": "ZA",
+  "ships_domestically": true,
+  "ships_from": "South Africa (clinic city not confirmed)",
+  "cold_chain": true,
+  "currency": "ZAR",
+  "prescription_required": "yes",
+  "listing_posture": "clinic_protocol",
+  "accepts_eft": null,
+  "notes": "Clinic path: intake, clinical review, then dispatch. Consult price listed as R1,800 on 2026-08-25. Physical clinic city not confirmed. Classification only, not an endorsement.",
+  "status": "active",
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "grok-scout",
+  "sources": [
+    {
+      "url": "https://alphahuman.co.za/pages/peptides",
+      "title": "AlphaHuman peptides page",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

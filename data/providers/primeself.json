@@ -1,0 +1,30 @@
+{
+  "id": "primeself",
+  "schema_version": "1.0.0",
+  "name": "PrimeSelf",
+  "kind": "nootropic_retailer",
+  "website": "https://primeself.co.za",
+  "city": null,
+  "province": null,
+  "country": "ZA",
+  "ships_domestically": true,
+  "ships_from": "South Africa",
+  "cold_chain": false,
+  "currency": "ZAR",
+  "prescription_required": "no",
+  "listing_posture": "food_supplement",
+  "accepts_eft": null,
+  "notes": "Branded oral nootropic and wellness products. Collagen peptides on site are food collagen, not research peptides. Classification only, not an endorsement.",
+  "status": "active",
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "grok-scout",
+  "sources": [
+    {
+      "url": "https://primeself.co.za",
+      "title": "PrimeSelf homepage",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

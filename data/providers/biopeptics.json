@@ -1,0 +1,30 @@
+{
+  "id": "biopeptics",
+  "schema_version": "1.0.0",
+  "name": "BioPeptics",
+  "kind": "research_storefront",
+  "website": "https://biopeptics.co.za",
+  "city": null,
+  "province": null,
+  "country": "ZA",
+  "ships_domestically": true,
+  "ships_from": "South Africa (city not on homepage)",
+  "cold_chain": null,
+  "currency": "ZAR",
+  "prescription_required": "no",
+  "listing_posture": "research_use_only",
+  "accepts_eft": null,
+  "notes": "Labels products for research use only. Public add-to-cart seen on 2026-08-25. City not on homepage. Classification only, not an endorsement.",
+  "status": "active",
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "grok-scout",
+  "sources": [
+    {
+      "url": "https://biopeptics.co.za",
+      "title": "BioPeptics homepage",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

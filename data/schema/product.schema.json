@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://peptides-research-south-africa.local/schema/product.schema.json",
+  "title": "Product listing",
+  "description": "A compound offered by a provider in a given form. Not a buy button.",
+  "allOf": [
+    { "$ref": "defs.schema.json#/$defs/record_base" }
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "schema_version",
+    "compound_id",
+    "provider_id",
+    "product_url",
+    "title_on_page",
+    "form",
+    "route",
+    "strength",
+    "price_zar",
+    "price_visible_without_login",
+    "coa_stated",
+    "last_reviewed_at",
+    "reviewer",
+    "sources",
+    "confidence"
+  ],
+  "properties": {
+    "id": { "$ref": "defs.schema.json#/$defs/kebab_id" },
+    "schema_version": { "$ref": "defs.schema.json#/$defs/schema_version" },
+    "compound_id": { "$ref": "defs.schema.json#/$defs/kebab_id" },
+    "provider_id": { "$ref": "defs.schema.json#/$defs/kebab_id" },
+    "product_url": { "type": "string", "format": "uri" },
+    "title_on_page": { "type": "string", "minLength": 1 },
+    "form": { "$ref": "defs.schema.json#/$defs/form" },
+    "route": { "$ref": "defs.schema.json#/$defs/route" },
+    "strength": { "type": "string", "minLength": 1 },
+    "pack_size": { "type": ["string", "null"] },
+    "price_zar": { "type": ["number", "null"] },
+    "price_checked_on": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "price_visible_without_login": { "type": "boolean" },
+    "in_stock": { "type": ["boolean", "null"] },
+    "coa_stated": { "type": "boolean" },
+    "coa_url": { "type": ["string", "null"], "format": "uri" },
+    "coa_checked_on": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "blend_compound_ids": {
+      "type": "array",
+      "items": { "$ref": "defs.schema.json#/$defs/kebab_id" }
+    },
+    "vendor_claim_quote": { "type": ["string", "null"] },
+    "last_reviewed_at": { "$ref": "defs.schema.json#/$defs/iso_date" },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "sources": { "$ref": "defs.schema.json#/$defs/sources" },
+    "confidence": { "$ref": "defs.schema.json#/$defs/confidence" }
+  }
+}

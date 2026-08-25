@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://peptides-research-south-africa.local/schema/compound.schema.json",
+  "title": "Compound record",
+  "description": "What a compound is. Not a shopping item. Not medical advice.",
+  "allOf": [
+    { "$ref": "defs.schema.json#/$defs/record_base" }
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "schema_version",
+    "name",
+    "aliases",
+    "class",
+    "categories",
+    "summary",
+    "research_uses",
+    "reported_protocols",
+    "routes_studied",
+    "forms",
+    "evidence_grade",
+    "sahpra",
+    "wada",
+    "stack_pair_notes",
+    "last_reviewed_at",
+    "reviewer",
+    "sources",
+    "confidence"
+  ],
+  "properties": {
+    "id": { "$ref": "defs.schema.json#/$defs/kebab_id" },
+    "schema_version": { "$ref": "defs.schema.json#/$defs/schema_version" },
+    "name": { "type": "string", "minLength": 1 },
+    "inn": { "type": ["string", "null"] },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "class": { "$ref": "defs.schema.json#/$defs/compound_class" },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "defs.schema.json#/$defs/compound_category" }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "cas": { "type": ["string", "null"] },
+    "sequence": { "type": ["string", "null"] },
+    "summary": { "type": "string", "minLength": 1 },
+    "research_uses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["use", "evidence_grade", "sources"],
+        "properties": {
+          "use": { "type": "string", "minLength": 1 },
+          "evidence_grade": { "$ref": "defs.schema.json#/$defs/evidence_grade" },
+          "sources": { "$ref": "defs.schema.json#/$defs/sources" }
+        }
+      }
+    },
+    "reported_protocols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["route", "amount", "frequency", "duration", "context", "sources"],
+        "properties": {
+          "route": { "$ref": "defs.schema.json#/$defs/route" },
+          "amount": { "type": "string" },
+          "frequency": { "type": "string" },
+          "duration": { "type": "string" },
+          "context": { "type": "string" },
+          "sources": { "$ref": "defs.schema.json#/$defs/sources" }
+        }
+      }
+    },
+    "routes_studied": {
+      "type": "array",
+      "items": { "$ref": "defs.schema.json#/$defs/route" }
+    },
+    "forms": {
+      "type": "array",
+      "items": { "$ref": "defs.schema.json#/$defs/form" }
+    },
+    "evidence_grade": { "$ref": "defs.schema.json#/$defs/evidence_grade" },
+    "sahpra": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "registered_medicine",
+        "registration_numbers",
+        "schedule",
+        "on_unregistered_warning_list",
+        "notes",
+        "verified_on",
+        "sources"
+      ],
+      "properties": {
+        "registered_medicine": { "type": ["boolean", "null"] },
+        "registration_numbers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "schedule": { "type": ["string", "null"] },
+        "on_unregistered_warning_list": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "verified_on": { "$ref": "defs.schema.json#/$defs/iso_date" },
+        "sources": { "$ref": "defs.schema.json#/$defs/sources" }
+      }
+    },
+    "wada": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["prohibited", "class", "list_year", "notes", "verified_on", "sources"],
+      "properties": {
+        "prohibited": { "type": "boolean" },
+        "class": { "type": ["string", "null"] },
+        "list_year": { "type": ["integer", "null"] },
+        "notes": { "type": "string" },
+        "verified_on": { "$ref": "defs.schema.json#/$defs/iso_date" },
+        "sources": { "$ref": "defs.schema.json#/$defs/sources" }
+      }
+    },
+    "storage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lyophilized": { "type": "string" },
+        "reconstituted": { "type": "string" },
+        "cold_chain": { "type": "boolean" }
+      }
+    },
+    "stack_pair_notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["other_id", "kind", "note"],
+        "properties": {
+          "other_id": { "$ref": "defs.schema.json#/$defs/kebab_id" },
+          "kind": { "type": "string", "enum": ["overlap", "common_pair", "caution"] },
+          "note": { "type": "string", "minLength": 1 },
+          "sources": {
+            "type": "array",
+            "items": { "$ref": "defs.schema.json#/$defs/source" }
+          }
+        }
+      }
+    },
+    "related_compound_ids": {
+      "type": "array",
+      "items": { "$ref": "defs.schema.json#/$defs/kebab_id" }
+    },
+    "last_reviewed_at": { "$ref": "defs.schema.json#/$defs/iso_date" },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "sources": { "$ref": "defs.schema.json#/$defs/sources" },
+    "confidence": { "$ref": "defs.schema.json#/$defs/confidence" }
+  }
+}

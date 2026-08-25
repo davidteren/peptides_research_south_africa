@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://peptides-research-south-africa.local/schema/stack.schema.json",
+  "title": "Stack record",
+  "description": "A named combination of catalog compounds. Schema now; public UI later. Not a recommendation.",
+  "allOf": [
+    { "$ref": "defs.schema.json#/$defs/record_base" }
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "schema_version",
+    "name",
+    "compound_ids",
+    "origin",
+    "last_reviewed_at",
+    "reviewer",
+    "sources",
+    "confidence"
+  ],
+  "properties": {
+    "id": { "$ref": "defs.schema.json#/$defs/kebab_id" },
+    "schema_version": { "$ref": "defs.schema.json#/$defs/schema_version" },
+    "name": { "type": "string", "minLength": 1 },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "compound_ids": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "defs.schema.json#/$defs/kebab_id" }
+    },
+    "origin": {
+      "type": "string",
+      "enum": ["vendor_named", "commonly_reported", "user_saved"]
+    },
+    "reported_use": { "type": ["string", "null"] },
+    "last_reviewed_at": { "$ref": "defs.schema.json#/$defs/iso_date" },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "sources": { "$ref": "defs.schema.json#/$defs/sources" },
+    "confidence": { "$ref": "defs.schema.json#/$defs/confidence" }
+  }
+}

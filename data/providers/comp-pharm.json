@@ -1,0 +1,30 @@
+{
+  "id": "comp-pharm",
+  "schema_version": "1.0.0",
+  "name": "Comp Pharm Pharmacy",
+  "kind": "compounding_pharmacy",
+  "website": "https://comppharm.co.za/our-peptides-2/",
+  "city": "Parys",
+  "province": "Free State",
+  "country": "ZA",
+  "ships_domestically": null,
+  "ships_from": "Parys, Free State",
+  "cold_chain": null,
+  "currency": "ZAR",
+  "prescription_required": "practitioner_only",
+  "listing_posture": "compounded_on_script",
+  "accepts_eft": null,
+  "notes": "Public peptide list seen on 2026-08-25. Site shows SAPC / PSSA badges. Gold range at comppharmgold.net is practitioner exclusive. Treat public table as script or practitioner until confirmed otherwise. Classification only, not an endorsement.",
+  "status": "active",
+  "last_reviewed_at": "2026-08-25",
+  "reviewer": "grok-scout",
+  "sources": [
+    {
+      "url": "https://comppharm.co.za/our-peptides-2/",
+      "title": "Comp Pharm peptide list",
+      "accessed_at": "2026-08-25",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}
