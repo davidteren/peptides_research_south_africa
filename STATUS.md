@@ -23,7 +23,7 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. Public nam
 | **EP-04 to EP-09** | Planned only. See [docs/EPICS.md](docs/EPICS.md). |
 | **Phase 2 to Phase 5** | Planned only. See [docs/ROADMAP.md](docs/ROADMAP.md). |
 
-Repo: private GitHub `davidteren/peptides_research_south_africa` (created at bootstrap).
+Repo: private GitHub [`davidteren/peptides_research_south_africa`](https://github.com/davidteren/peptides_research_south_africa). Tracker: [issues](https://github.com/davidteren/peptides_research_south_africa/issues) and [milestones](https://github.com/davidteren/peptides_research_south_africa/milestones) (9 epics, 64 stories).
 
 ## Run / test
 
@@ -49,4 +49,4 @@ Needs Ruby 3.4.9 (rbenv) and local PostgreSQL. `DB_HOST` is only for the contrib
 2. Add product rows only where a live page shows a form.
 3. Then build EP-01 import + disclaimer, then compound and provider pages.
 
-Tracker: this file plus GitHub issues once the tracker skill has run. Do not invent private IDs.
+Tracker: this file plus GitHub issues and milestones. Do not invent private IDs.
