@@ -1,0 +1,16 @@
+STATUS.md
+  h_e8a5bb9272fa34 5,26
+docs/PRD.md
+  h_e8a5bb9272fa34 9,437
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "8a49357ab587cd0403e49128faf968c82eb12c79",
+  "prompts": {},
+  "humans": {
+    "h_e8a5bb9272fa34": {
+      "author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
