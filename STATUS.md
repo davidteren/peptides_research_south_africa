@@ -2,7 +2,7 @@
 
 ## Last session handoff
 
-**What this is:** A private South Africa research catalog for peptides, nootropics, and local providers.
+**What this is:** A public South Africa research catalog for peptides, nootropics, and local providers.
 **What we finished:** Rails skeleton, planning docs, JSON schemas, and eight live provider files.
 **What you do next:** Research the first six compounds into `data/compounds/` (BPC-157, TB-500, Semax, Selank, GHK-Cu, Noopept). Phase 1 Honest catalog
 
@@ -23,7 +23,7 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. Public nam
 | **EP-04 to EP-09** | Planned only. See [docs/EPICS.md](docs/EPICS.md). |
 | **Phase 2 to Phase 5** | Planned only. See [docs/ROADMAP.md](docs/ROADMAP.md). |
 
-Repo: private GitHub [`davidteren/peptides_research_south_africa`](https://github.com/davidteren/peptides_research_south_africa). Tracker: [issues](https://github.com/davidteren/peptides_research_south_africa/issues) and [milestones](https://github.com/davidteren/peptides_research_south_africa/milestones) (9 epics, 64 stories).
+Repo: public GitHub [`davidteren/peptides_research_south_africa`](https://github.com/davidteren/peptides_research_south_africa). Tracker: [issues](https://github.com/davidteren/peptides_research_south_africa/issues) and [milestones](https://github.com/davidteren/peptides_research_south_africa/milestones) (9 epics, 64 stories).
 
 ## Run / test
 

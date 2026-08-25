@@ -6,7 +6,7 @@
 | Working name | `peptides_research_south_africa` |
 | Rails module | `PeptidesResearchSouthAfrica` |
 | Owner | David Teren |
-| Repo | Private GitHub: `davidteren/peptides_research_south_africa` |
+| Repo | Public GitHub: `davidteren/peptides_research_south_africa` |
 | Date | 2026-08-25 |
 | Status | First PRD. This document states requirements. It does not promise that the app already ships them. |
 
@@ -434,5 +434,6 @@ This PRD does not require those features to be implemented in the current scaffo
 
 ## Changelog
 
+- 2026-08-25: Repo visibility changed to public.
 - 2026-08-25: Consistency pass. F-2 lists the stored grade; F-8 is the card-level stamp. Schema path is `defs.schema.json`, not `source.schema.json`. Folder tree exists; records do not. Linked ROADMAP and EPICS.
 - 2026-08-25: First PRD. Catalog JSON, SA-first providers, SAHPRA/WADA/evidence flags, PWA and local saves as P1, stacks and accounts as P2.
