@@ -1,0 +1,224 @@
+{
+  "id": "selank",
+  "schema_version": "1.0.0",
+  "name": "Selank",
+  "inn": null,
+  "aliases": [
+    "Selanc",
+    "TP-7",
+    "TP 7",
+    "Thr-Lys-Pro-Arg-Pro-Gly-Pro",
+    "TKPRPGP"
+  ],
+  "class": "nootropic",
+  "categories": ["peptide", "nootropic"],
+  "tags": ["tuftsin-analogue", "heptapeptide", "anxiolytic"],
+  "cas": "129954-34-3",
+  "sequence": "Thr-Lys-Pro-Arg-Pro-Gly-Pro",
+  "summary": "Selank is a synthetic heptapeptide analogue of the endogenous tetrapeptide tuftsin, with the sequence Thr-Lys-Pro-Arg-Pro-Gly-Pro. Russian clinical papers have studied it as an anxiolytic with a mild nootropic effect, often by the nasal route. Human trials exist, so the catalog grade is early human evidence, not a South African registered medicine. SAHPRA names Selank among illegally marketed peptides. A Russian drug status, if any, is not SAHPRA registration.",
+  "research_uses": [
+    {
+      "use": "Anxiety disorders, including generalized anxiety, phobic-anxiety, and somatoform presentations, compared with benzodiazepines in Russian clinical papers",
+      "evidence_grade": "early_human",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18454096/",
+          "title": "Efficacy and possible mechanisms of action of a new peptide anxiolytic selank in the therapy of generalized anxiety disorders and neurasthenia",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "quote": "Sixty-two patients with generalized anxiety disorder (GAD) and neurasthenia were studied. The effect of selank (30 patients) was compared to that of medazepam (32 patients).",
+          "pmid": "18454096"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25176261/",
+          "title": "A comparison of the anxiolytic effect and tolerability of selank and phenazepam in the treatment of anxiety disorders",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "quote": "A comparative study of the anxiolytic effect and tolerability of selank and phenazepam was carried out in 60 patients with phobic-anxiety- and somatoform disorders. Results Pronounced anxiolytic and mild nootropic effects of selank were demonstrated.",
+          "pmid": "25176261"
+        }
+      ]
+    },
+    {
+      "use": "Nootropic and cognitive research, including a mild nootropic signal in anxiety trials and resting-state fMRI in healthy adults",
+      "evidence_grade": "early_human",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25176261/",
+          "title": "A comparison of the anxiolytic effect and tolerability of selank and phenazepam in the treatment of anxiety disorders",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "quote": "Pronounced anxiolytic and mild nootropic effects of selank were demonstrated.",
+          "pmid": "25176261"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32342318/",
+          "title": "Functional Connectomic Approach to Studying Selank and Semax Effects",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "quote": "The present study was aimed at the assessment of effects of anxiolytic Selank and nootropic Semax on the whole-brain resting-state functional connectivity (FC) of each of the predefined regions of interest (ROIs) in 52 healthy participants.",
+          "pmid": "32342318"
+        }
+      ]
+    },
+    {
+      "use": "Immune-marker and cytokine changes in patients with anxiety-asthenic disorders",
+      "evidence_grade": "early_human",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18577961/",
+          "title": "Immunomodulatory effects of selank in patients with anxiety-asthenic disorders",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "quote": "The changes of the Th1/Th2 cytokine balance in vivo were found in the serum of patients with generalized anxiety disorder and neurasthenia who received Selank during 14 days.",
+          "pmid": "18577961"
+        }
+      ]
+    }
+  ],
+  "reported_protocols": [],
+  "routes_studied": ["nasal"],
+  "forms": ["nasal_spray"],
+  "evidence_grade": "early_human",
+  "sahpra": {
+    "registered_medicine": false,
+    "registration_numbers": [],
+    "schedule": null,
+    "on_unregistered_warning_list": true,
+    "notes": "SAHPRA names Selank among illegally marketed peptides. A Russian clinical or drug status is not SAHPRA registration. This is not legal advice.",
+    "verified_on": "2026-08-26",
+    "sources": [
+      {
+        "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+        "title": "SAHPRA peptide products public information",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator",
+        "quote": "Illegally marketed peptides include: BPC-157, TB-500, Melanotan II, CJC-1295, Ipamorelin, PT-141, AOD-9604, Selank, and Semax."
+      }
+    ]
+  },
+  "wada": {
+    "prohibited": false,
+    "class": null,
+    "list_year": 2026,
+    "notes": "The 2026 Prohibited List examples do not name Selank. BPC-157 is named under S0. Thymosin-beta4 and TB-500 are named under S2.3. Not named is not a clearance for tested athletes.",
+    "verified_on": "2026-08-26",
+    "sources": [
+      {
+        "url": "https://www.wada-ama.org/en/prohibited-list",
+        "title": "WADA Prohibited List",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator"
+      },
+      {
+        "url": "https://www.wada-ama.org/sites/default/files/2025-09/2026list_en_final_clean_september_2025.pdf",
+        "title": "WADA Prohibited List 2026 (PDF)",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator",
+        "quote": "This class covers many different substances including but not limited to BPC-157, 2,4-dinitrophenol (DNP), ryanodine receptor-1-calstabin complex stabilizers [e.g. S-107, S48168 (ARM210)] and troponin activators (e.g. reldesemtiv and tirasemtiv)."
+      }
+    ]
+  },
+  "storage": {
+    "lyophilized": "",
+    "reconstituted": "",
+    "cold_chain": false
+  },
+  "stack_pair_notes": [
+    {
+      "other_id": "semax",
+      "kind": "common_pair",
+      "note": "A resting-state fMRI study in 52 healthy adults assessed Selank and Semax together. Shared research context is not a protocol.",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32342318/",
+          "title": "Functional Connectomic Approach to Studying Selank and Semax Effects",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "quote": "The present study was aimed at the assessment of effects of anxiolytic Selank and nootropic Semax on the whole-brain resting-state functional connectivity (FC) of each of the predefined regions of interest (ROIs) in 52 healthy participants.",
+          "pmid": "32342318"
+        }
+      ]
+    }
+  ],
+  "related_compound_ids": ["semax"],
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30255741/",
+      "title": "Peptide-based Anxiolytics: The Molecular Aspects of Heptapeptide Selank Biological Activity",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "quote": "Heptapeptide Selank (Thr-Lys-Pro-Arg-Pro-Gly-Pro) exhibits prolonged anti-anxiety and nootropic effects.",
+      "pmid": "30255741"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18661785/",
+      "title": "Effects of heptapeptide selank on genetically-based and situation-provoked symptoms of depression in behavior in WAG/Rij and Wistar rats, and in BALB/c mice",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "quote": "A synthetic derivative of the endogenous peptide tuftsin heptapeptide selank (Thr-Lys-Pro-Arg-Pro-Gly-Pro) possesses an anxiolytic and psychostimulant effect, and represents a working element of a new peptide drug having completed the third phase of the clinical testing as a selective anxiolytic.",
+      "pmid": "18661785"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18454096/",
+      "title": "Efficacy and possible mechanisms of action of a new peptide anxiolytic selank in the therapy of generalized anxiety disorders and neurasthenia",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "quote": "Sixty-two patients with generalized anxiety disorder (GAD) and neurasthenia were studied. The effect of selank (30 patients) was compared to that of medazepam (32 patients).",
+      "pmid": "18454096"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25176261/",
+      "title": "A comparison of the anxiolytic effect and tolerability of selank and phenazepam in the treatment of anxiety disorders",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "quote": "Pronounced anxiolytic and mild nootropic effects of selank were demonstrated.",
+      "pmid": "25176261"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32342318/",
+      "title": "Functional Connectomic Approach to Studying Selank and Semax Effects",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "quote": "The present study was aimed at the assessment of effects of anxiolytic Selank and nootropic Semax on the whole-brain resting-state functional connectivity (FC) of each of the predefined regions of interest (ROIs) in 52 healthy participants.",
+      "pmid": "32342318"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18577961/",
+      "title": "Immunomodulatory effects of selank in patients with anxiety-asthenic disorders",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "quote": "The changes of the Th1/Th2 cytokine balance in vivo were found in the serum of patients with generalized anxiety disorder and neurasthenia who received Selank during 14 days.",
+      "pmid": "18577961"
+    },
+    {
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/11765600",
+      "title": "Selank | C33H57N11O9 | CID 11765600 - PubChem",
+      "accessed_at": "2026-08-26",
+      "kind": "encyclopedia",
+      "quote": "Synonyms: Selank, 129954-34-3, Selanc, Thr-Lys-Pro-Arg-Pro-Gly-Pro. Sequence TKPRPGP. IUPAC Condensed H-Thr-Lys-Pro-Arg-Pro-Gly-Pro-OH."
+    },
+    {
+      "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+      "title": "SAHPRA peptide products public information",
+      "accessed_at": "2026-08-26",
+      "kind": "regulator",
+      "quote": "Illegally marketed peptides include: BPC-157, TB-500, Melanotan II, CJC-1295, Ipamorelin, PT-141, AOD-9604, Selank, and Semax."
+    },
+    {
+      "url": "https://www.wada-ama.org/en/prohibited-list",
+      "title": "WADA Prohibited List",
+      "accessed_at": "2026-08-26",
+      "kind": "regulator"
+    },
+    {
+      "url": "https://www.wada-ama.org/sites/default/files/2025-09/2026list_en_final_clean_september_2025.pdf",
+      "title": "WADA Prohibited List 2026 (PDF)",
+      "accessed_at": "2026-08-26",
+      "kind": "regulator"
+    }
+  ],
+  "confidence": "partial"
+}

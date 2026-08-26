@@ -54,10 +54,11 @@ Touch `last_reviewed_at` only when you opened the cited URL in that session.
 
 Providers (seen live): `reschem`, `biopeptics`, `tetratide-labs`, `the-clinic`, `comp-pharm`, `alphahuman`, `neuroactive`, `primeself`.
 
-Compounds still to research: `bpc-157`, `tb-500`, `semax`, `selank`, `ghk-cu`, `noopept`.
+Starter compounds (cited 2026-08-26): `bpc-157`, `tb-500`, `semax`, `selank`, `ghk-cu`, `noopept`.
 
 Products: only after the matching compound file exists, and only where a live page shows a form.
 
 ## Changelog
 
+- 2026-08-26: Six starter compound files with literature, SAHPRA, and WADA citations.
 - 2026-08-25: Schema, templates, and first eight provider files. No compound research yet.

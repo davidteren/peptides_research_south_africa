@@ -1,0 +1,160 @@
+{
+  "id": "tb-500",
+  "schema_version": "1.0.0",
+  "name": "TB-500",
+  "inn": null,
+  "aliases": [
+    "TB500",
+    "TB 500",
+    "TB-4",
+    "thymosin beta-4 fragment",
+    "thymosin-β4 derivative",
+    "Ac-LKKTETQ",
+    "N-acetylated 17-23 fragment of thymosin beta-4"
+  ],
+  "class": "healing",
+  "categories": ["peptide"],
+  "tags": ["actin-binding-fragment", "unregistered"],
+  "cas": "885340-08-9",
+  "sequence": "Ac-LKKTETQ",
+  "summary": "TB-500 is a synthetic N-acetylated heptapeptide (Ac-LKKTETQ) that matches residues 17-23 of human thymosin beta-4, the actin-binding domain. Esposito et al. identified that sequence in a product sold as TB-500 (PMID 22962027). It is not the full 43-amino-acid thymosin beta-4 protein. A synthetic LKKTETQ peptide promoted dermal wound repair in aged mice at a level comparable to the parent molecule (PMID 12581423). A review localises angiogenesis, wound healing, and cell-migration activity of thymosin beta-4 to this motif (PMID 20179146). SAHPRA names TB-500 among illegally marketed unregistered peptides. WADA prohibits thymosin-β4 and its derivatives, e.g. TB-500, at all times under S2.3.",
+  "research_uses": [
+    {
+      "use": "Dermal wound repair in aged mice using a synthetic LKKTETQ peptide matching the actin-binding domain of thymosin beta-4",
+      "evidence_grade": "preclinical",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12581423/",
+          "title": "Thymosin beta 4 and a synthetic peptide containing its actin-binding domain promote dermal wound repair in db/db diabetic mice and in aged mice",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "12581423",
+          "quote": "The actin-binding domain of thymosin beta 4 duplicated in a seven-amino acid synthetic peptide, LKKTETQ, was able to promote repair in the aged animals comparable to that observed with the parent molecule."
+        }
+      ]
+    },
+    {
+      "use": "Angiogenesis, wound healing, and cell migration attributed to the LKKTETQ actin-binding motif of thymosin beta-4",
+      "evidence_grade": "preclinical",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20179146/",
+          "title": "Biological activities of thymosin beta4 defined by active sites in short peptide sequences",
+          "accessed_at": "2026-08-26",
+          "kind": "review",
+          "pmid": "20179146",
+          "quote": "a short sequence containing LKKTETQ, the central actin-binding domain (aa 17-23) plus 1 additional amino acid (Q), promotes angiogenesis, wound healing, and cell migration."
+        }
+      ]
+    }
+  ],
+  "reported_protocols": [],
+  "routes_studied": ["topical"],
+  "forms": ["topical"],
+  "evidence_grade": "preclinical",
+  "sahpra": {
+    "registered_medicine": false,
+    "registration_numbers": [],
+    "schedule": null,
+    "on_unregistered_warning_list": true,
+    "notes": "SAHPRA lists TB-500 among examples of illegally marketed unregistered peptides. This catalog entry is informational. It is not legal advice.",
+    "verified_on": "2026-08-26",
+    "sources": [
+      {
+        "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+        "title": "SAHPRA peptide products public information",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator",
+        "quote": "Illegally marketed peptides include: BPC-157, TB-500, Melanotan II, CJC-1295, Ipamorelin, PT-141, AOD-9604, Selank, and Semax."
+      }
+    ]
+  },
+  "wada": {
+    "prohibited": true,
+    "class": "S2.3",
+    "list_year": 2026,
+    "notes": "The 2026 Prohibited List names Thymosin-β4 and its derivatives e.g. TB-500 under S2.3 Growth factors and growth factor modulators. Prohibited at all times (in- and out-of-competition).",
+    "verified_on": "2026-08-26",
+    "sources": [
+      {
+        "url": "https://www.wada-ama.org/en/prohibited-list",
+        "title": "WADA Prohibited List",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator",
+        "quote": "Thymosin-β4 and its derivatives e.g. TB-500"
+      }
+    ]
+  },
+  "storage": {
+    "lyophilized": "",
+    "reconstituted": "",
+    "cold_chain": false
+  },
+  "stack_pair_notes": [
+    {
+      "other_id": "bpc-157",
+      "kind": "overlap",
+      "note": "SAHPRA names both TB-500 and BPC-157 as examples of illegally marketed unregistered peptides.",
+      "sources": [
+        {
+          "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+          "title": "SAHPRA peptide products public information",
+          "accessed_at": "2026-08-26",
+          "kind": "regulator",
+          "quote": "Illegally marketed peptides include: BPC-157, TB-500, Melanotan II, CJC-1295, Ipamorelin, PT-141, AOD-9604, Selank, and Semax."
+        }
+      ]
+    }
+  ],
+  "related_compound_ids": ["bpc-157"],
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22962027/",
+      "title": "Synthesis and characterization of the N-terminal acetylated 17-23 fragment of thymosin beta 4 identified in TB-500, a product suspected to possess doping potential",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "22962027",
+      "quote": "This work describes the detection and the identification of the N-terminal acetylated 17-23 fragment of human thymosin beta 4 (Ac-LKKTETQ) in TB-500"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12581423/",
+      "title": "Thymosin beta 4 and a synthetic peptide containing its actin-binding domain promote dermal wound repair in db/db diabetic mice and in aged mice",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "12581423",
+      "quote": "The actin-binding domain of thymosin beta 4 duplicated in a seven-amino acid synthetic peptide, LKKTETQ, was able to promote repair in the aged animals comparable to that observed with the parent molecule."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20179146/",
+      "title": "Biological activities of thymosin beta4 defined by active sites in short peptide sequences",
+      "accessed_at": "2026-08-26",
+      "kind": "review",
+      "pmid": "20179146",
+      "quote": "a short sequence containing LKKTETQ, the central actin-binding domain (aa 17-23) plus 1 additional amino acid (Q), promotes angiogenesis, wound healing, and cell migration."
+    },
+    {
+      "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+      "title": "SAHPRA peptide products public information",
+      "accessed_at": "2026-08-26",
+      "kind": "regulator",
+      "quote": "Illegally marketed peptides include: BPC-157, TB-500, Melanotan II, CJC-1295, Ipamorelin, PT-141, AOD-9604, Selank, and Semax."
+    },
+    {
+      "url": "https://www.wada-ama.org/en/prohibited-list",
+      "title": "WADA Prohibited List",
+      "accessed_at": "2026-08-26",
+      "kind": "regulator",
+      "quote": "Thymosin-β4 and its derivatives e.g. TB-500"
+    },
+    {
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/62707662",
+      "title": "PubChem CID 62707662 TB-500 (Ac-Leu-Lys-Lys-Thr-Glu-Thr-Gln-OH)",
+      "accessed_at": "2026-08-26",
+      "kind": "encyclopedia",
+      "quote": "TB500; 885340-08-9; TB-500; Ac-Leu-Lys-Lys-Thr-Glu-Thr-Gln-OH"
+    }
+  ],
+  "confidence": "partial"
+}

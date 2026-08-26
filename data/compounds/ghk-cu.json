@@ -1,0 +1,217 @@
+{
+  "id": "ghk-cu",
+  "schema_version": "1.0.0",
+  "name": "GHK-Cu",
+  "inn": null,
+  "aliases": [
+    "GHK copper",
+    "copper tripeptide-1",
+    "Copper Tripeptide-1",
+    "prezatide copper",
+    "glycyl-L-histidyl-L-lysine copper",
+    "Iamin"
+  ],
+  "class": "copper",
+  "categories": ["copper_peptide", "peptide"],
+  "tags": ["copper_peptide", "cosmetic", "wound"],
+  "cas": "89030-95-5",
+  "sequence": "GHK",
+  "summary": "GHK-Cu is the copper(II) complex of the naturally occurring tripeptide glycyl-L-histidyl-L-lysine (GHK). GHK is present in human plasma, saliva, and urine and declines with age. Reviews and laboratory papers describe the complex as a tissue-remodeling signal studied mainly on skin. Human research is concentrated on topical use: a 1994 multicenter randomized trial of a GHK-Cu gel (Iamin) reported faster closure of diabetic neuropathic plantar ulcers versus vehicle, and small facial or post-laser cream studies report mixed cosmetic results. It is not a SAHPRA-registered medicine. Cosmetic labels use the INCI name Copper Tripeptide-1. This catalog is informational. It is not medical advice and it is not a protocol.",
+  "research_uses": [
+    {
+      "use": "Topical healing of diabetic neuropathic plantar ulcers (Iamin GHK-Cu gel in a 1994 multicenter randomized trial)",
+      "evidence_grade": "early_human",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17147644/",
+          "title": "Enhanced healing of ulcers in patients with diabetes by topical treatment with glycyl-l-histidyl-l-lysine copper",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "17147644",
+          "quote": "A multicenter, randomized, evaluator-blinded, placebo-controlled clinical study was conducted to evaluate the safety and effectiveness of glycyl-l-histidyl-l-lysine: copper complex (lamin Gel) in the treatment of diabetic neuropathic ulcers."
+        }
+      ]
+    },
+    {
+      "use": "Topical appearance of photoaged or laser-resurfaced facial skin (small cream studies; results mixed)",
+      "evidence_grade": "early_human",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16847171/",
+          "title": "Effects of topical copper tripeptide complex on CO2 laser-resurfaced skin",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "16847171",
+          "quote": "Copper tripeptide complex (GHK-Cu) skin care products placed on CO2 laser-resurfaced skin offered no significant reduction or resolution of posttreatment erythema. Objective evaluation found no significant improvement in wrinkles or overall skin quality. However, patient satisfaction was significantly higher for those who used GHK-Cu skin care products after CO2 laser skin resurfacing."
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4508379/",
+          "title": "GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration",
+          "accessed_at": "2026-08-26",
+          "kind": "review",
+          "pmid": "26236730",
+          "license": "CC BY",
+          "quote": "A number of placebo-controlled clinical studies found GHK-Cu to improve skin quality in women around the age of 50."
+        }
+      ]
+    },
+    {
+      "use": "Collagen and glycosaminoglycan synthesis in fibroblast cultures and animal wound models",
+      "evidence_grade": "preclinical",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3169264/",
+          "title": "Stimulation of collagen synthesis in fibroblast cultures by the tripeptide-copper complex glycyl-L-histidyl-L-lysine-Cu2+",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "3169264",
+          "quote": "We report the stimulating effect of GHK-Cu on collagen synthesis by fibroblasts. The stimulation began between 10(-12) and 10(-11) M, maximized at 10(-9) M, and was independent of any change in cell number."
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6073405/",
+          "title": "Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data",
+          "accessed_at": "2026-08-26",
+          "kind": "review",
+          "pmid": "29986520",
+          "license": "CC BY 4.0",
+          "quote": "A number of experiments established that GHK stimulates synthesis of collagen, selected glycosaminoglycans and small proteoglycan decorin."
+        }
+      ]
+    }
+  ],
+  "reported_protocols": [],
+  "routes_studied": ["topical", "injectable_subq"],
+  "forms": ["topical", "lyophilized_vial", "powder"],
+  "evidence_grade": "early_human",
+  "sahpra": {
+    "registered_medicine": false,
+    "registration_numbers": [],
+    "schedule": null,
+    "on_unregistered_warning_list": false,
+    "notes": "GHK-Cu is not among the named examples on SAHPRA's peptide products public information page (BPC-157, TB-500, Melanotan II, CJC-1295, Ipamorelin, PT-141, AOD-9604, Selank, and Semax). A search of the SAHPRA PI and PIL repository for GHK returned no product leaflet. Under the Medicines and Related Substances Act 101 of 1965, a product intended to treat, prevent, or alter bodily functions must be registered before it can be sold as a medicine. Cosmetic Copper Tripeptide-1 is not a registered medicine.",
+    "verified_on": "2026-08-26",
+    "sources": [
+      {
+        "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+        "title": "SAHPRA peptide products public information",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator",
+        "quote": "Illegally marketed peptides include: BPC-157, TB-500, Melanotan II, CJC-1295, Ipamorelin, PT-141, AOD-9604, Selank, and Semax."
+      },
+      {
+        "url": "https://pi-pil-repository.sahpra.org.za/?s=GHK",
+        "title": "SAHPRA PI and PIL repository search for GHK",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator",
+        "quote": "Search Results for “GHK”"
+      }
+    ]
+  },
+  "wada": {
+    "prohibited": false,
+    "class": null,
+    "list_year": 2026,
+    "notes": "GHK-Cu, GHK, copper tripeptide-1, and prezatide copper are not named on the 2026 Prohibited List. The official index (checked 2026-08-26) has no GHK or copper-peptide entry. BPC-157 is named under S0. Thymosin-β4 and derivatives such as TB-500 are named under S2.3. This catalog does not treat the S0 catch-all as a named prohibition for GHK-Cu.",
+    "verified_on": "2026-08-26",
+    "sources": [
+      {
+        "url": "https://www.wada-ama.org/sites/default/files/2025-09/2026list_en_final_clean_september_2025.pdf",
+        "title": "WADA 2026 Prohibited List (PDF, in force 1 January 2026)",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator",
+        "quote": "This class covers many different substances including but not limited to BPC-157, 2,4-dinitrophenol (DNP), ryanodine receptor-1-calstabin complex stabilizers [e.g. S-107, S48168 (ARM210)] and troponin activators (e.g. reldesemtiv and tirasemtiv)."
+      },
+      {
+        "url": "https://www.wada-ama.org/en/prohibited-list",
+        "title": "WADA Prohibited List",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator"
+      }
+    ]
+  },
+  "storage": {
+    "lyophilized": "Research listings typically keep the copper complex as a refrigerated lyophilized powder. This catalog does not set a storage protocol.",
+    "reconstituted": "Papers opened for this record do not state a standard reconstituted shelf life.",
+    "cold_chain": true
+  },
+  "stack_pair_notes": [],
+  "related_compound_ids": [],
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4508379/",
+      "title": "GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration",
+      "accessed_at": "2026-08-26",
+      "kind": "review",
+      "pmid": "26236730",
+      "license": "CC BY",
+      "quote": "GHK (glycyl-L-histidyl-L-lysine) is present in human plasma, saliva, and urine but declines with age. It is proposed that GHK functions as a complex with copper 2+ which accelerates wound healing and skin repair."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26236730/",
+      "title": "GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration (PubMed)",
+      "accessed_at": "2026-08-26",
+      "kind": "review",
+      "pmid": "26236730"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6073405/",
+      "title": "Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data",
+      "accessed_at": "2026-08-26",
+      "kind": "review",
+      "pmid": "29986520",
+      "license": "CC BY 4.0",
+      "quote": "The human copper-binding peptide GHK-Cu (glycyl-l-histidyl-l-lysine) is a small, naturally occurring tri-peptide present in human plasma that also can be released from tissues in case of an injury."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29986520/",
+      "title": "Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data (PubMed)",
+      "accessed_at": "2026-08-26",
+      "kind": "review",
+      "pmid": "29986520"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18644225/",
+      "title": "The human tri-peptide GHK and tissue remodeling",
+      "accessed_at": "2026-08-26",
+      "kind": "review",
+      "pmid": "18644225",
+      "quote": "GHK-Cu stimulates wound healing in numerous models and in humans. Controlled studies on aged skin demonstrated that it tightens skin, improves elasticity and firmness, reduces fine lines, wrinkles, photodamage and hyperpigmentation."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17147644/",
+      "title": "Enhanced healing of ulcers in patients with diabetes by topical treatment with glycyl-l-histidyl-l-lysine copper",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "17147644"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3169264/",
+      "title": "Stimulation of collagen synthesis in fibroblast cultures by the tripeptide-copper complex glycyl-L-histidyl-L-lysine-Cu2+",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "3169264"
+    },
+    {
+      "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+      "title": "SAHPRA peptide products public information",
+      "accessed_at": "2026-08-26",
+      "kind": "regulator"
+    },
+    {
+      "url": "https://www.wada-ama.org/sites/default/files/2025-09/2026list_en_final_clean_september_2025.pdf",
+      "title": "WADA 2026 Prohibited List (PDF, in force 1 January 2026)",
+      "accessed_at": "2026-08-26",
+      "kind": "regulator"
+    },
+    {
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Prezatide-copper",
+      "title": "Prezatide copper (PubChem CID 71587328)",
+      "accessed_at": "2026-08-26",
+      "kind": "encyclopedia",
+      "quote": "CAS 89030-95-5. Synonyms: Prezatide copper; Copper tripeptide-1; GHK copper."
+    }
+  ],
+  "confidence": "partial"
+}

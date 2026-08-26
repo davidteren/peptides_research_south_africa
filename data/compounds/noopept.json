@@ -1,0 +1,230 @@
+{
+  "id": "noopept",
+  "schema_version": "1.0.0",
+  "name": "Noopept",
+  "inn": "omberacetam",
+  "aliases": [
+    "omberacetam",
+    "GVS-111",
+    "DVD-111",
+    "SGS-111",
+    "N-phenylacetyl-L-prolylglycine ethyl ester",
+    "ethyl phenylacetyl-Pro-Gly"
+  ],
+  "class": "nootropic",
+  "categories": ["nootropic"],
+  "tags": ["dipeptide", "racetam-related", "oral"],
+  "cas": "157115-85-0",
+  "sequence": "N-phenylacetyl-Pro-Gly-OEt",
+  "summary": "Noopept (INN omberacetam, developmental code GVS-111) is N-phenylacetyl-L-prolylglycine ethyl ester. It is a proline-containing dipeptide designed as an analogue of piracetam. Russian clinical papers report oral tablet use in mild cognitive disorders of vascular and traumatic origin. Preclinical papers report neuroprotective effects in oxidative-stress neuron models and increased hippocampal NGF and BDNF mRNA. It is typically studied by mouth, not as a peptide injectable. This record is informational. It is not medical advice.",
+  "research_uses": [
+    {
+      "use": "Mild cognitive disorders in organic brain disease of vascular or traumatic origin, including an open stroke study",
+      "evidence_grade": "early_human",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19234797/",
+          "title": "Comparative studies of Noopept and piracetam in the treatment of patients with mild cognitive disorders in organic brain diseases of vascular and traumatic origin",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "19234797",
+          "quote": "Comparative studies of Noopept and piracetam in the treatment of patients with mild cognitive disorders in organic brain diseases of vascular and traumatic origin"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22500312/",
+          "title": "Noopept in the treatment of mild cognitive impairment in patients with stroke",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "22500312",
+          "quote": "The present open prospective study included 60 patients with stroke treated with noopept during 12 months."
+        }
+      ]
+    },
+    {
+      "use": "Neuroprotection against oxidative damage in cultured human cortical neurons",
+      "evidence_grade": "preclinical",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12711349/",
+          "title": "GVS-111 prevents oxidative damage and apoptosis in normal and Down's syndrome human cortical neurons",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "12711349",
+          "quote": "The neuroprotective activity of a novel N-acylprolyl-containing dipeptide analog of the nootropic 2-oxo-1-pyrrolidine acetamide (Piracetam) designated as GVS-111 (DVD-111/Noopept) was tested in two in vitro models of neuronal degeneration mediated by oxidative stress"
+        }
+      ]
+    },
+    {
+      "use": "Hippocampal NGF and BDNF expression, and spatial memory in an olfactory-bulbectomy Alzheimer-like mouse model",
+      "evidence_grade": "preclinical",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19240853/",
+          "title": "Noopept stimulates the expression of NGF and BDNF in rat hippocampus",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "19240853",
+          "quote": "We studied the effect of original dipeptide preparation Noopept (N-phenylacetyl-L-prolylglycine ethyl ester, GVS-111) with nootropic and neuroprotective properties on the expression of mRNA for neurotropic factors NGF and BDNF in rat hippocampus."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17092975/",
+          "title": "The nootropic and neuroprotective proline-containing dipeptide noopept restores spatial memory and increases immunoreactivity to amyloid in an Alzheimer's disease model",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "17092975",
+          "quote": "The effects of the novel proline-containing nootropic and neuroprotective dipeptide, noopept (GVS-111, N-phenylacetyl-L-prolylglycine ethyl ester) were investigated in NMRI mice following olfactory bulbectomy."
+        }
+      ]
+    }
+  ],
+  "reported_protocols": [
+    {
+      "route": "oral",
+      "amount": "20 mg daily (commonly reported research protocol, not an instruction)",
+      "frequency": "daily",
+      "duration": "2 months in the open stroke study (patients were followed for 12 months)",
+      "context": "Open prospective study in 60 patients with stroke and mild cognitive impairment. Amounts are commonly reported research protocols. They are not dosing instructions.",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22500312/",
+          "title": "Noopept in the treatment of mild cognitive impairment in patients with stroke",
+          "accessed_at": "2026-08-26",
+          "kind": "primary_literature",
+          "pmid": "22500312",
+          "quote": "The results have demonstrated that noopept, used in dose 20 mg daily during 2 months, improves cognitive functions in stroke patients and has a high level of safety."
+        }
+      ]
+    }
+  ],
+  "routes_studied": ["oral"],
+  "forms": ["tablet"],
+  "evidence_grade": "early_human",
+  "sahpra": {
+    "registered_medicine": null,
+    "registration_numbers": [],
+    "schedule": null,
+    "on_unregistered_warning_list": false,
+    "notes": "Not named on the SAHPRA May 2026 unregistered-peptide warning examples (BPC-157, TB-500, Melanotan II, CJC-1295, Ipamorelin, PT-141, AOD-9604, Selank, Semax). A SAHPRA-registered medicine for omberacetam or Noopept was not verified on this review. Not legal advice.",
+    "verified_on": "2026-08-26",
+    "sources": [
+      {
+        "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+        "title": "SAHPRA peptide products public information",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator",
+        "quote": "Illegally marketed peptides include: BPC-157, TB-500, Melanotan II, CJC-1295, Ipamorelin, PT-141, AOD-9604, Selank, and Semax."
+      }
+    ]
+  },
+  "wada": {
+    "prohibited": false,
+    "class": null,
+    "list_year": 2026,
+    "notes": "Not named on the 2026 Prohibited List. The 2026 S0 examples name BPC-157, 2,4-dinitrophenol (DNP), ryanodine receptor-1-calstabin complex stabilizers, and troponin activators, not omberacetam or Noopept. Fonturacetam (4-phenylpiracetam) is listed as a stimulant; omberacetam is not.",
+    "verified_on": "2026-08-26",
+    "sources": [
+      {
+        "url": "https://www.wada-ama.org/en/prohibited-list",
+        "title": "WADA Prohibited List",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator"
+      },
+      {
+        "url": "https://www.wada-ama.org/sites/default/files/2025-09/2026list_en_final_clean_september_2025.pdf",
+        "title": "WADA 2026 Prohibited List (PDF, in force 1 January 2026)",
+        "accessed_at": "2026-08-26",
+        "kind": "regulator",
+        "quote": "This class covers many different substances including but not limited to BPC-157, 2,4-dinitrophenol (DNP), ryanodine receptor-1-calstabin complex stabilizers [e.g. S-107, S48168 (ARM210)] and troponin activators (e.g. reldesemtiv and tirasemtiv)."
+      }
+    ]
+  },
+  "storage": {
+    "lyophilized": "",
+    "reconstituted": "",
+    "cold_chain": false
+  },
+  "stack_pair_notes": [],
+  "related_compound_ids": [],
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12596521/",
+      "title": "The original novel nootropic and neuroprotective agent noopept",
+      "accessed_at": "2026-08-26",
+      "kind": "review",
+      "pmid": "12596521",
+      "quote": "The paper describes pharmacological properties of the new nootropic drug noopept created using an original approach based on the imitation of a nonpeptide nootrope structure by means of the short-peptide design. In particular, the structure of pyracetam was designed using dipeptide nootropes."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19234797/",
+      "title": "Comparative studies of Noopept and piracetam in the treatment of patients with mild cognitive disorders in organic brain diseases of vascular and traumatic origin",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "19234797"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22500312/",
+      "title": "Noopept in the treatment of mild cognitive impairment in patients with stroke",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "22500312",
+      "quote": "The results have demonstrated that noopept, used in dose 20 mg daily during 2 months, improves cognitive functions in stroke patients and has a high level of safety."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19240853/",
+      "title": "Noopept stimulates the expression of NGF and BDNF in rat hippocampus",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "19240853"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17092975/",
+      "title": "The nootropic and neuroprotective proline-containing dipeptide noopept restores spatial memory and increases immunoreactivity to amyloid in an Alzheimer's disease model",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "17092975"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12711349/",
+      "title": "GVS-111 prevents oxidative damage and apoptosis in normal and Down's syndrome human cortical neurons",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "12711349"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27099787/",
+      "title": "Molecular mechanism underlying the action of substituted Pro-Gly dipeptide Noopept",
+      "accessed_at": "2026-08-26",
+      "kind": "primary_literature",
+      "pmid": "27099787",
+      "quote": "This study was performed in order to reveal the effect of Noopept (ethyl ester of N-phenylacetyl-Lprolylglycine, GVS-111) on the DNA-binding activity of transcriptional factors (TF) in HEK293 cells"
+    },
+    {
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/180496",
+      "title": "PubChem CID 180496 (Noopept / omberacetam)",
+      "accessed_at": "2026-08-26",
+      "kind": "encyclopedia",
+      "quote": "Synonyms include Noopept, 157115-85-0, Omberacetam, GVS-111, OMBERACETAM [INN]."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Omberacetam",
+      "title": "Omberacetam (Wikipedia)",
+      "accessed_at": "2026-08-26",
+      "kind": "encyclopedia"
+    },
+    {
+      "url": "https://www.sahpra.org.za/peptide-products-public-information/",
+      "title": "SAHPRA peptide products public information",
+      "accessed_at": "2026-08-26",
+      "kind": "regulator"
+    },
+    {
+      "url": "https://www.wada-ama.org/en/prohibited-list",
+      "title": "WADA Prohibited List",
+      "accessed_at": "2026-08-26",
+      "kind": "regulator"
+    }
+  ],
+  "confidence": "partial"
+}
