@@ -1,0 +1,90 @@
+data/products/biopeptics-bpc-157-lyophilized-vial-10mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/biopeptics-ghk-cu-blend-70mg.json
+  h_e8a5bb9272fa34 1-37
+data/products/biopeptics-ghk-cu-lyophilized-vial-100mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/biopeptics-selank-lyophilized-vial-10mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/biopeptics-semax-lyophilized-vial-10mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/biopeptics-tb-500-lyophilized-vial-10mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/neuroactive-noopept-capsule-20mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-bpc-157-blend-nasal-10mg.json
+  h_e8a5bb9272fa34 1-36
+data/products/reschem-bpc-157-blend-nasal-20mg.json
+  h_e8a5bb9272fa34 1-36
+data/products/reschem-bpc-157-blend-pen-10mg.json
+  h_e8a5bb9272fa34 1-36
+data/products/reschem-bpc-157-blend-pen-20mg.json
+  h_e8a5bb9272fa34 1-36
+data/products/reschem-noopept-capsule-20mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-noopept-powder-10g.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-noopept-powder-2g.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-selank-nasal-spray-10mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-selank-nasal-spray-20mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-selank-nasal-spray-30mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-selank-prefilled-pen-10mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-selank-prefilled-pen-20mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-selank-prefilled-pen-30mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-semax-nasal-spray-10mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-semax-nasal-spray-30mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-semax-prefilled-pen-10mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/reschem-semax-prefilled-pen-30mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/tetratide-labs-bpc-157-blend-20mg-pen-kit.json
+  h_e8a5bb9272fa34 1-35
+data/products/tetratide-labs-bpc-157-blend-20mg.json
+  h_e8a5bb9272fa34 1-35
+data/products/tetratide-labs-bpc-157-lyophilized-vial-10mg-pen-kit.json
+  h_e8a5bb9272fa34 1-32
+data/products/tetratide-labs-bpc-157-lyophilized-vial-10mg.json
+  h_e8a5bb9272fa34 1-32
+data/products/tetratide-labs-ghk-cu-lyophilized-vial-100mg-pen-kit.json
+  h_e8a5bb9272fa34 1-32
+data/products/tetratide-labs-ghk-cu-lyophilized-vial-100mg.json
+  h_e8a5bb9272fa34 1-32
+data/products/tetratide-labs-tb-500-lyophilized-vial-10mg-pen-kit.json
+  h_e8a5bb9272fa34 1-32
+data/products/tetratide-labs-tb-500-lyophilized-vial-10mg.json
+  h_e8a5bb9272fa34 1-32
+data/products/the-clinic-bpc-157-blend-10mg.json
+  h_e8a5bb9272fa34 1-36
+data/products/the-clinic-bpc-157-cartridge-5mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/the-clinic-ghk-cu-cartridge-50mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/the-clinic-selank-cartridge-8mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/the-clinic-semax-cartridge-10mg.json
+  h_e8a5bb9272fa34 1-33
+data/products/the-clinic-tb-500-cartridge-10mg.json
+  h_e8a5bb9272fa34 1-33
+docs/loops/INDEX-phase-1.md
+  h_e8a5bb9272fa34 35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "a82410e0a3bb42c2b9dcd7f29d712a867dde3130",
+  "prompts": {},
+  "humans": {
+    "h_e8a5bb9272fa34": {
+      "author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
