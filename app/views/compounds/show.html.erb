@@ -1,0 +1,79 @@
+<% content_for :title, @compound.name %>
+
+<%= render "disclaimer" %>
+
+<article id="compound-detail">
+  <h1 id="compound-name" class="text-3xl font-semibold"><%= @compound.name %></h1>
+  <p class="mt-2 text-sm text-stone-600">
+    <%= t("compounds.classification") %>: <%= @compound.classification %>
+    · <%= t("compounds.evidence") %>: <%= evidence_grade_label(@compound.evidence_grade) %>
+  </p>
+
+  <section class="mt-6">
+    <h2 class="font-semibold"><%= t("compounds.summary") %></h2>
+    <p id="compound-summary" class="mt-2 max-w-2xl"><%= @compound.summary %></p>
+  </section>
+
+  <% aliases = Array(@compound.payload&.dig("aliases")) %>
+  <% if aliases.any? %>
+    <section class="mt-6">
+      <h2 class="font-semibold"><%= t("compounds.aliases") %></h2>
+      <p id="compound-aliases" class="mt-2 text-stone-700"><%= aliases.join(", ") %></p>
+    </section>
+  <% end %>
+
+  <section class="mt-6">
+    <h2 class="font-semibold"><%= t("compounds.routes") %></h2>
+    <p id="compound-routes" class="mt-2"><%= catalog_routes(@compound) %></p>
+  </section>
+
+  <% uses = Array(@compound.payload&.dig("research_uses")) %>
+  <% if uses.any? %>
+    <section class="mt-6">
+      <h2 class="font-semibold"><%= t("compounds.uses") %></h2>
+      <ul id="compound-research-uses" class="mt-2 list-disc pl-5">
+        <% uses.each do |use| %>
+          <li><%= use["use"] %> (<%= evidence_grade_label(use["evidence_grade"]) %>)</li>
+        <% end %>
+      </ul>
+    </section>
+  <% end %>
+
+  <section class="mt-6">
+    <h2 class="font-semibold"><%= t("compounds.protocols") %></h2>
+    <% protocols = Array(@compound.payload&.dig("reported_protocols")) %>
+    <% if protocols.empty? %>
+      <p id="compound-protocols-empty" class="mt-2 text-stone-600"><%= t("compounds.protocols_empty") %></p>
+    <% else %>
+      <ul id="compound-protocols" class="mt-2 list-disc pl-5">
+        <% protocols.each do |protocol| %>
+          <li>
+            <%= protocol["route"] %>:
+            <%= protocol["amount"] %>;
+            <%= protocol["frequency"] %>;
+            <%= protocol["context"] %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="font-semibold"><%= t("compounds.listings") %></h2>
+    <% if @products.empty? %>
+      <p id="compound-listings-empty" class="mt-2 text-stone-600"><%= t("compounds.listings_empty") %></p>
+    <% else %>
+      <ul id="compound-listings" class="mt-2 divide-y divide-stone-200">
+        <% @products.each do |product| %>
+          <li id="compound-listing-<%= product.slug %>" data-testid="product-row" class="py-3">
+            <%= link_to product.provider.name, provider_path(product.provider), class: "underline" %>
+            · <%= product.form %> · <%= product.strength %>
+            <% if product.price_zar.present? && product.price_visible_without_login? %>
+              · R<%= product.price_zar %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </section>
+</article>

@@ -34,11 +34,11 @@ This is the runbook. Work the first unchecked, dependency-ready item. Tick it. R
 - [x] P1-06 · Compound JSON `noopept` · status:done · `#46` · result: cited early_human oral, not on SAHPRA peptide list
 - [x] P1-07 · Product rows where a live page shows a form · status:done · `#41` `#43` · result: 38 live listings; The Clinic prices stay empty
 - [x] P1-08 · Validate catalog JSON in CI / rake · status:done · `#14` `#19` · result: `rails catalog:check` plus tests
-- [ ] P1-09 · Import valid JSON into PostgreSQL · status:todo · `#16` · result:-
-- [ ] P1-10 · Catalog nav and empty states · status:todo · `#22` · result:-
-- [ ] P1-11 · Site-wide disclaimer + SAHPRA link · status:todo · `#25` `#27` `#29` · result:-
-- [ ] P1-12 · Compound index and detail (Phase 1 only) · status:todo · `#38` `#40` `#42` `#44` `#45` `#47` `#48` · result:-
-- [ ] P1-13 · Provider index and detail + listing rows · status:todo · `#32` `#34` `#35` `#36` · result:-
+- [x] P1-09 · Import valid JSON into PostgreSQL · status:done · `#16` · result: `rails catalog:import`
+- [x] P1-10 · Catalog nav and empty states · status:done · `#22` · result: home / compounds / providers nav
+- [x] P1-11 · Site-wide disclaimer + SAHPRA link · status:done · `#25` `#27` `#29` · result: shared disclaimer partial
+- [x] P1-12 · Compound index and detail (Phase 1 only) · status:done · `#38` `#40` `#42` `#44` `#45` `#48` · result: `#47` stays open (vendor-only summary gate)
+- [x] P1-13 · Provider index and detail + listing rows · status:done · `#32` `#34` `#35` `#36` · result: research-storefront notice; Clinic prices hidden
 
 Do not do in this loop: `#49` card stamp, `#37` comparison table, `#39` COA UI, EP-04 to EP-09.
 

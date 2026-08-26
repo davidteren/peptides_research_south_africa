@@ -1,0 +1,12 @@
+<% content_for :title, t("home.title") %>
+
+<%= render "disclaimer" %>
+
+<section id="home-intro">
+  <h1 class="text-3xl font-semibold"><%= t("home.title") %></h1>
+  <p class="mt-4 max-w-2xl text-lg text-stone-700"><%= t("home.lead") %></p>
+  <p class="mt-6 flex gap-4">
+    <%= link_to t("nav.compounds"), compounds_path, id: "home-link-compounds", class: "underline" %>
+    <%= link_to t("nav.providers"), providers_path, id: "home-link-providers", class: "underline" %>
+  </p>
+</section>

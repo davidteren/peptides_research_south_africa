@@ -1,31 +1,53 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  app:
+    name: "Peptides research South Africa"
+  nav:
+    home: "Home"
+    compounds: "Compounds"
+    providers: "Providers"
+  disclaimer:
+    title: "This is a research catalog"
+    body: "It is not medical advice. It is not legal advice. It is not an instruction to buy or use any product. Listing a provider is not an endorsement."
+    sahpra: "SAHPRA warns the public about unregistered peptide products sold in South Africa."
+    sahpra_link: "Read the SAHPRA public warning"
+  home:
+    title: "A South Africa catalog of peptides and nootropics"
+    lead: "See what a compound is, who lists it locally, and in what form. Facts come from cited public sources. Typical amounts are commonly reported research protocols, not a dose."
+  compounds:
+    title: "Compounds"
+    empty: "No compounds are in the catalog yet."
+    classification: "Class"
+    routes: "Routes studied"
+    evidence: "Evidence grade"
+    aliases: "Also known as"
+    summary: "What it is"
+    uses: "Research uses"
+    protocols: "Commonly reported research protocols"
+    protocols_empty: "No commonly reported research protocol is on file."
+    listings: "Listings in this catalog"
+    listings_empty: "No local listing is on file yet."
+  providers:
+    title: "Providers"
+    empty: "No providers are in the catalog yet."
+    kind: "Type"
+    city: "City"
+    website: "Website"
+    posture: "How they list products"
+    prescription: "Prescription on the public page"
+    research_notice: "This is a research-use storefront. It is not presented here as a licensed medicine supplier."
+    listings: "Listed products"
+    listings_empty: "No product row is on file yet."
+  grades:
+    anecdotal: "Anecdotal"
+    preclinical: "Preclinical"
+    early_human: "Early human"
+    registered_medicine: "Registered medicine"
+  kinds:
+    research_storefront: "Research storefront"
+    compounding_pharmacy: "Compounding pharmacy"
+    clinic: "Clinic"
+    nootropic_retailer: "Nootropic retailer"
+    marketplace: "Marketplace"
+    b2b: "Business supplier"
+    international: "International"
+    unknown: "Unknown"

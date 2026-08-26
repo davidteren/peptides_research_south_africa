@@ -1,0 +1,22 @@
+<% content_for :title, t("compounds.title") %>
+
+<%= render "disclaimer" %>
+
+<h1 class="text-3xl font-semibold"><%= t("compounds.title") %></h1>
+
+<% if @compounds.empty? %>
+  <p id="compound-index-empty" class="mt-6 text-stone-600"><%= t("compounds.empty") %></p>
+<% else %>
+  <ul id="compound-index" class="mt-6 divide-y divide-stone-200">
+    <% @compounds.each do |compound| %>
+      <li id="compound-card-<%= compound.slug %>" data-testid="compound-card" class="py-4">
+        <%= link_to compound.name, compound_path(compound), id: "compound-link-#{compound.slug}", class: "text-lg font-medium underline" %>
+        <p class="mt-1 text-sm text-stone-600">
+          <%= t("compounds.classification") %>: <%= compound.classification %>
+          · <%= t("compounds.routes") %>: <%= catalog_routes(compound) %>
+          · <%= t("compounds.evidence") %>: <%= evidence_grade_label(compound.evidence_grade) %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

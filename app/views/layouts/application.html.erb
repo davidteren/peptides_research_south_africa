@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= content_for(:title) || "Peptides Research South Africa" %></title>
+    <title><%= content_for(:title) || t("app.name") %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Peptides Research South Africa">
+    <meta name="application-name" content="<%= t("app.name") %>">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="min-h-screen bg-stone-50 text-stone-900">
+    <header class="border-b border-stone-200 bg-white">
+      <div class="mx-auto flex max-w-4xl items-center justify-between gap-4 px-5 py-4">
+        <%= link_to t("app.name"), root_path, id: "site-nav-home", class: "font-semibold" %>
+        <nav id="site-nav" aria-label="Main">
+          <ul class="flex gap-4">
+            <li><%= link_to t("nav.compounds"), compounds_path, id: "site-nav-compounds" %></li>
+            <li><%= link_to t("nav.providers"), providers_path, id: "site-nav-providers" %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="mx-auto max-w-4xl px-5 py-8">
       <%= yield %>
     </main>
   </body>

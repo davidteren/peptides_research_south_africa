@@ -1,0 +1,23 @@
+<% content_for :title, t("providers.title") %>
+
+<%= render "disclaimer" %>
+
+<h1 class="text-3xl font-semibold"><%= t("providers.title") %></h1>
+
+<% if @providers.empty? %>
+  <p id="provider-index-empty" class="mt-6 text-stone-600"><%= t("providers.empty") %></p>
+<% else %>
+  <ul id="provider-index" class="mt-6 divide-y divide-stone-200">
+    <% @providers.each do |provider| %>
+      <li id="provider-card-<%= provider.slug %>" data-testid="provider-card" class="py-4">
+        <%= link_to provider.name, provider_path(provider), id: "provider-link-#{provider.slug}", class: "text-lg font-medium underline" %>
+        <p class="mt-1 text-sm text-stone-600">
+          <%= t("providers.kind") %>: <%= provider_kind_label(provider.kind) %>
+          <% if provider.city.present? %>
+            · <%= provider.city %>
+          <% end %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
