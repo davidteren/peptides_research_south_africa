@@ -4,9 +4,9 @@
 
 **What this is:** A public South Africa research catalog for peptides, nootropics, and local providers.
 **What we finished:** Phase 1 catalog data and screens: six compounds, 38 listings, import, disclaimer, browse pages.
-**What you do next:** Run `bin/dev` and click through compounds and providers, then start Phase 2 search and flags.
+**What you do next:** Start Phase 2 search, filters, and SAHPRA/WADA stamps. `#47` is still open.
 
-_Last updated: 2026-08-25. Read this, then [AGENTS.md](AGENTS.md) and the `docs/` suite._
+_Last updated: 2026-08-26. Read this, then [AGENTS.md](AGENTS.md) and the `docs/` suite._
 
 This is a research catalog. It is not a clinic. It is not a pharmacy. Public name is TBD (candidates: PeptideSA, SourceSA, Compound Index).
 
