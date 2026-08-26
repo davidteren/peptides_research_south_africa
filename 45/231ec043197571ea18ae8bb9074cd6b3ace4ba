@@ -1,0 +1,30 @@
+STATUS.md
+  h_e8a5bb9272fa34 6-7,15,21
+data/README.md
+  h_e8a5bb9272fa34 57,63
+data/compounds/bpc-157.json
+  h_e8a5bb9272fa34 1-249
+data/compounds/ghk-cu.json
+  h_e8a5bb9272fa34 1-217
+data/compounds/noopept.json
+  h_e8a5bb9272fa34 1-230
+data/compounds/selank.json
+  h_e8a5bb9272fa34 1-224
+data/compounds/semax.json
+  h_e8a5bb9272fa34 1-248
+data/compounds/tb-500.json
+  h_e8a5bb9272fa34 1-160
+docs/loops/INDEX-phase-1.md
+  h_e8a5bb9272fa34 1-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "45231ec043197571ea18ae8bb9074cd6b3ace4ba",
+  "prompts": {},
+  "humans": {
+    "h_e8a5bb9272fa34": {
+      "author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
