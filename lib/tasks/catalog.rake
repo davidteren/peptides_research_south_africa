@@ -9,4 +9,10 @@ namespace :catalog do
       abort "Catalog JSON failed the merge check."
     end
   end
+
+  desc "Load valid catalog JSON into PostgreSQL"
+  task import: :environment do
+    Catalog::Importer.import!
+    puts "Imported #{Compound.count} compounds, #{Provider.count} providers, #{Product.count} products."
+  end
 end
