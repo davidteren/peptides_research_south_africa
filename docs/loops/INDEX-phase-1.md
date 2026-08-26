@@ -33,7 +33,7 @@ This is the runbook. Work the first unchecked, dependency-ready item. Tick it. R
 - [x] P1-05 · Compound JSON `ghk-cu` · status:done · `#46` · result: cited early_human topical, not on SAHPRA peptide list
 - [x] P1-06 · Compound JSON `noopept` · status:done · `#46` · result: cited early_human oral, not on SAHPRA peptide list
 - [ ] P1-07 · Product rows where a live page shows a form · status:todo · `#41` `#43` · result:-
-- [ ] P1-08 · Validate catalog JSON in CI / rake · status:todo · `#14` `#19` · result:-
+- [x] P1-08 · Validate catalog JSON in CI / rake · status:done · `#14` `#19` · result: `rails catalog:check` plus tests
 - [ ] P1-09 · Import valid JSON into PostgreSQL · status:todo · `#16` · result:-
 - [ ] P1-10 · Catalog nav and empty states · status:todo · `#22` · result:-
 - [ ] P1-11 · Site-wide disclaimer + SAHPRA link · status:todo · `#25` `#27` `#29` · result:-
