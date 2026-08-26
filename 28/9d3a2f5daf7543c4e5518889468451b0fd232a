@@ -1,0 +1,40 @@
+app/models/compound.rb
+  h_e8a5bb9272fa34 1-12
+app/models/product.rb
+  h_e8a5bb9272fa34 1-11
+app/models/provider.rb
+  h_e8a5bb9272fa34 1-12
+db/migrate/20260826074258_create_compounds.rb
+  h_e8a5bb9272fa34 1-17
+db/migrate/20260826074259_create_providers.rb
+  h_e8a5bb9272fa34 1-20
+db/migrate/20260826074260_create_products.rb
+  h_e8a5bb9272fa34 1-22
+db/schema.rb
+  h_e8a5bb9272fa34 1-71
+db/seeds.rb
+  h_e8a5bb9272fa34 1
+lib/catalog/importer.rb
+  h_e8a5bb9272fa34 1-106
+lib/tasks/catalog.rake
+  h_e8a5bb9272fa34 12-17
+test/models/catalog_importer_test.rb
+  h_e8a5bb9272fa34 1-51
+test/models/compound_test.rb
+  h_e8a5bb9272fa34 1-10
+test/models/product_test.rb
+  h_e8a5bb9272fa34 1-10
+test/models/provider_test.rb
+  h_e8a5bb9272fa34 1-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "289d3a2f5daf7543c4e5518889468451b0fd232a",
+  "prompts": {},
+  "humans": {
+    "h_e8a5bb9272fa34": {
+      "author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
