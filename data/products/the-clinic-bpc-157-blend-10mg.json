@@ -1,0 +1,36 @@
+{
+  "id": "the-clinic-bpc-157-blend-10mg",
+  "schema_version": "1.0.0",
+  "compound_id": "bpc-157",
+  "provider_id": "the-clinic",
+  "product_url": "https://www.the-clinic.co.za/shop/wolverine-stack",
+  "title_on_page": "The Wolverine Stack",
+  "form": "blend",
+  "route": "injectable_subq",
+  "strength": "10 mg",
+  "pack_size": "2 mL (TB500 5 mg + BPC-157 5 mg)",
+  "price_zar": null,
+  "price_checked_on": null,
+  "price_visible_without_login": false,
+  "in_stock": true,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [
+    "bpc-157",
+    "tb-500"
+  ],
+  "vendor_claim_quote": "It combines TB500 and BPC-157 in a single cartridge. Supplied as a 10mg pre-reconstituted cartridge in 2mL.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.the-clinic.co.za/shop/wolverine-stack",
+      "title": "The Wolverine Stack",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Availability: In Stock. Price not shown without login."
+    }
+  ],
+  "confidence": "seen_live"
+}

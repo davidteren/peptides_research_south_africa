@@ -1,0 +1,36 @@
+{
+  "id": "reschem-bpc-157-blend-pen-10mg",
+  "schema_version": "1.0.0",
+  "compound_id": "bpc-157",
+  "provider_id": "reschem",
+  "product_url": "https://reschem.co.za/products/bpc-157-tb500-peptide-south-africa",
+  "title_on_page": "BPC-157 + TB500 Peptide - 10mg Pre-Filled Pen (SubQ)",
+  "form": "blend",
+  "route": "injectable_subq",
+  "strength": "10 mg",
+  "pack_size": null,
+  "price_zar": 1049,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": null,
+  "coa_stated": true,
+  "coa_url": "https://cdn.shopify.com/s/files/1/0704/2161/0749/files/BPC-157_COA.pdf?v=1770204130",
+  "coa_checked_on": "2026-08-26",
+  "blend_compound_ids": [
+    "bpc-157",
+    "tb-500"
+  ],
+  "vendor_claim_quote": "This BPC-157 + TB500 peptide combination supports accelerated tissue repair and regeneration by synergistically enhancing both local and systemic healing processes",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://reschem.co.za/products/bpc-157-tb500-peptide-south-africa",
+      "title": "BPC-157 + TB500 Peptide | Reschem",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Size options: 10mg Pre-Filled Pen (SubQ), 20mg Pre-Filled Pen (SubQ), 10mg Nasal Spray, 20mg Nasal Spray. Certificate of Analysis links on the page."
+    }
+  ],
+  "confidence": "seen_live"
+}

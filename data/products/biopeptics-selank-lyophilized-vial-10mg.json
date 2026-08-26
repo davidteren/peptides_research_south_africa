@@ -1,0 +1,33 @@
+{
+  "id": "biopeptics-selank-lyophilized-vial-10mg",
+  "schema_version": "1.0.0",
+  "compound_id": "selank",
+  "provider_id": "biopeptics",
+  "product_url": "https://biopeptics.co.za/product/selank-10-mg-heptapeptide-neuropeptide-analog",
+  "title_on_page": "Selank 10mg (Heptapeptide Neuropeptide Analogue) Cognitive & Neurological Research Peptide",
+  "form": "lyophilized_vial",
+  "route": "injectable_subq",
+  "strength": "10 mg",
+  "pack_size": null,
+  "price_zar": 1000,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": true,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "At BioPeptics, Selank is supplied in sterile lyophilized vial form for enhanced stability and is independently third-party tested for identity and purity verification.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://biopeptics.co.za/product/selank-10-mg-heptapeptide-neuropeptide-analog",
+      "title": "Selank 10mg (Heptapeptide Neuropeptide Analogue) Cognitive & Neurological Research Peptide",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "For Research Use Only. Page stated In stock."
+    }
+  ],
+  "confidence": "seen_live"
+}

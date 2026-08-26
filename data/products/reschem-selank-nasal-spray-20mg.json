@@ -1,0 +1,33 @@
+{
+  "id": "reschem-selank-nasal-spray-20mg",
+  "schema_version": "1.0.0",
+  "compound_id": "selank",
+  "provider_id": "reschem",
+  "product_url": "https://reschem.co.za/products/buy-selank-south-africa",
+  "title_on_page": "Selank Peptide - 20mg Nasal Spray",
+  "form": "nasal_spray",
+  "route": "nasal",
+  "strength": "20 mg",
+  "pack_size": null,
+  "price_zar": 849,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": null,
+  "coa_stated": true,
+  "coa_url": "https://cdn.shopify.com/s/files/1/0704/2161/0749/files/Selank_COA.pdf?v=1770140312",
+  "coa_checked_on": "2026-08-26",
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "Selank is a nootropic peptide developed as a potential treatment for anxiety and other stress-related conditions.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://reschem.co.za/products/buy-selank-south-africa",
+      "title": "Selank Peptide | Reschem",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Certificate of Analysis linked on the product page. Size options include pre-filled pens and nasal sprays."
+    }
+  ],
+  "confidence": "seen_live"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "tetratide-labs-tb-500-lyophilized-vial-10mg-pen-kit",
+  "schema_version": "1.0.0",
+  "compound_id": "tb-500",
+  "provider_id": "tetratide-labs",
+  "product_url": "https://www.tetratidelabs.co.za/product-page/tb-500-10mg-research-starter-pen-kit",
+  "title_on_page": "TB-500 10mg Reusable Pen Kit",
+  "form": "lyophilized_vial",
+  "route": "injectable_subq",
+  "strength": "10 mg",
+  "pack_size": "vial, reconstitution kit, alcohol swabs, reusable precision pen",
+  "price_zar": 1750,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": false,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "A complete peptide pen-kit format with reusable precision pen and reconstitution accessories.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.tetratidelabs.co.za/product-page/tb-500-10mg-research-starter-pen-kit",
+      "title": "TB-500 10mg Reusable Pen Kit",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

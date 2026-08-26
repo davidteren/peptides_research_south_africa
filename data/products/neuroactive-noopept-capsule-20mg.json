@@ -1,0 +1,33 @@
+{
+  "id": "neuroactive-noopept-capsule-20mg",
+  "schema_version": "1.0.0",
+  "compound_id": "noopept",
+  "provider_id": "neuroactive",
+  "product_url": "https://neuroactive.co.za/products/noopept",
+  "title_on_page": "Noopept",
+  "form": "capsule",
+  "route": "oral",
+  "strength": "20 mg",
+  "pack_size": "60 capsules",
+  "price_zar": 189,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": null,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "Noopept from NeuroActive is a peptide-derived nootropic compound and is considered to be one of the most potent nootropic agents available on the market.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://neuroactive.co.za/products/noopept",
+      "title": "Noopept | NeuroActive",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Size: 60 Capsules (60 x 20mg). Price R189.00."
+    }
+  ],
+  "confidence": "seen_live"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "tetratide-labs-bpc-157-lyophilized-vial-10mg",
+  "schema_version": "1.0.0",
+  "compound_id": "bpc-157",
+  "provider_id": "tetratide-labs",
+  "product_url": "https://www.tetratidelabs.co.za/product-page/bpc-157-vial-10-mg",
+  "title_on_page": "BPC-157 10mg Vial Kit",
+  "form": "lyophilized_vial",
+  "route": "injectable_subq",
+  "strength": "10 mg",
+  "pack_size": "vial kit with reconstitution kit and alcohol swabs",
+  "price_zar": 820,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": false,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "A 10mg peptide vial with reconstitution accessories included and nationwide South African delivery.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.tetratidelabs.co.za/product-page/bpc-157-vial-10-mg",
+      "title": "BPC-157 10mg Vial Kit",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

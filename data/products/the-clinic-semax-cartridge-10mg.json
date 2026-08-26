@@ -1,0 +1,33 @@
+{
+  "id": "the-clinic-semax-cartridge-10mg",
+  "schema_version": "1.0.0",
+  "compound_id": "semax",
+  "provider_id": "the-clinic",
+  "product_url": "https://www.the-clinic.co.za/shop/semax",
+  "title_on_page": "Semax - focus & clarity - 10mg",
+  "form": "cartridge",
+  "route": "injectable_subq",
+  "strength": "10 mg",
+  "pack_size": "3 mL",
+  "price_zar": null,
+  "price_checked_on": null,
+  "price_visible_without_login": false,
+  "in_stock": true,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "Supplied as a 10mg cartridge in 3mL, it provides a pen-based format for repeated daily use.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.the-clinic.co.za/shop/semax",
+      "title": "Semax - focus & clarity - 10mg",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Availability: In Stock. Price not shown without login."
+    }
+  ],
+  "confidence": "seen_live"
+}

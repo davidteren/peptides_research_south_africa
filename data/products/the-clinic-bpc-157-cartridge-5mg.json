@@ -1,0 +1,33 @@
+{
+  "id": "the-clinic-bpc-157-cartridge-5mg",
+  "schema_version": "1.0.0",
+  "compound_id": "bpc-157",
+  "provider_id": "the-clinic",
+  "product_url": "https://www.the-clinic.co.za/shop/BPC-157",
+  "title_on_page": "BPC-157 (Body Protection Compound-157) - 5mg",
+  "form": "cartridge",
+  "route": "injectable_subq",
+  "strength": "5 mg",
+  "pack_size": "2 mL",
+  "price_zar": null,
+  "price_checked_on": null,
+  "price_visible_without_login": false,
+  "in_stock": true,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "Supplied as a 5 mg cartridge in 2 mL, it provides a pre-mixed format for structured click-based dosing.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.the-clinic.co.za/shop/BPC-157",
+      "title": "BPC-157 (Body Protection Compound-157) - 5mg",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Availability: In Stock. Price not shown without login."
+    }
+  ],
+  "confidence": "seen_live"
+}

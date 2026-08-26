@@ -1,0 +1,33 @@
+{
+  "id": "the-clinic-selank-cartridge-8mg",
+  "schema_version": "1.0.0",
+  "compound_id": "selank",
+  "provider_id": "the-clinic",
+  "product_url": "https://www.the-clinic.co.za/shop/selank",
+  "title_on_page": "Selank - Calm, focus, support -8mg",
+  "form": "cartridge",
+  "route": "injectable_subq",
+  "strength": "8 mg",
+  "pack_size": "3 mL",
+  "price_zar": null,
+  "price_checked_on": null,
+  "price_visible_without_login": false,
+  "in_stock": true,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "Supplied as an 8mg cartridge in 3mL, it provides a structured pen-based format for repeated daily use.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.the-clinic.co.za/shop/selank",
+      "title": "Selank - Calm, focus, support -8mg",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Availability: In Stock. Price not shown without login."
+    }
+  ],
+  "confidence": "seen_live"
+}

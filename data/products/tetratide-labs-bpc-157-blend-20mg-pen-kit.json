@@ -1,0 +1,35 @@
+{
+  "id": "tetratide-labs-bpc-157-blend-20mg-pen-kit",
+  "schema_version": "1.0.0",
+  "compound_id": "bpc-157",
+  "provider_id": "tetratide-labs",
+  "product_url": "https://www.tetratidelabs.co.za/product-page/tb500-bpc157-re-usable-metal-pen-kit",
+  "title_on_page": "Wolverine BPC-157 + TB-500 20mg Reusable Pen Kit",
+  "form": "blend",
+  "route": "injectable_subq",
+  "strength": "20 mg",
+  "pack_size": "blend vial, reconstitution kit, alcohol swabs, reusable precision pen",
+  "price_zar": 1250,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": null,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [
+    "bpc-157",
+    "tb-500"
+  ],
+  "vendor_claim_quote": "A complete 20mg peptide pen kit supplied with a reusable precision pen, reconstitution accessories and nationwide South African delivery.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.tetratidelabs.co.za/product-page/tb500-bpc157-re-usable-metal-pen-kit",
+      "title": "Wolverine BPC-157 + TB-500 20mg Reusable Pen Kit",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

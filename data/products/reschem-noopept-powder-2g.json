@@ -1,0 +1,33 @@
+{
+  "id": "reschem-noopept-powder-2g",
+  "schema_version": "1.0.0",
+  "compound_id": "noopept",
+  "provider_id": "reschem",
+  "product_url": "https://reschem.co.za/products/noopept-south-africa",
+  "title_on_page": "Noopept - Powder (2g)",
+  "form": "powder",
+  "route": "oral",
+  "strength": "2 g",
+  "pack_size": "2 g",
+  "price_zar": 189,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": null,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "Noopept is a powerful synthetic nootropic with proven cognitive enhancing benefits.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://reschem.co.za/products/noopept-south-africa",
+      "title": "Noopept | Reschem",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Size options: Powder (2g), Capsules (30x20mg), Bulk Powder (10g)."
+    }
+  ],
+  "confidence": "seen_live"
+}

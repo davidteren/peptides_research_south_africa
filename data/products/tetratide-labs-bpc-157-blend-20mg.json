@@ -1,0 +1,35 @@
+{
+  "id": "tetratide-labs-bpc-157-blend-20mg",
+  "schema_version": "1.0.0",
+  "compound_id": "bpc-157",
+  "provider_id": "tetratide-labs",
+  "product_url": "https://www.tetratidelabs.co.za/product-page/bpc-157-tb-500-wolverine-stack",
+  "title_on_page": "Wolverine BPC-157 + TB-500 10–20mg Vial Kit",
+  "form": "blend",
+  "route": "injectable_subq",
+  "strength": "20 mg",
+  "pack_size": "1 blend vial with reconstitution kit and alcohol swabs",
+  "price_zar": 1195,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": null,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [
+    "bpc-157",
+    "tb-500"
+  ],
+  "vendor_claim_quote": "Choose from 10mg and 20mg vial options, supplied with reconstitution accessories and nationwide South African delivery.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.tetratidelabs.co.za/product-page/bpc-157-tb-500-wolverine-stack",
+      "title": "Wolverine BPC-157 + TB-500 10–20mg Vial Kit",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

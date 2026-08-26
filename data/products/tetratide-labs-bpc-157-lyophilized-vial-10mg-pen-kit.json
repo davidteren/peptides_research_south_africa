@@ -1,0 +1,32 @@
+{
+  "id": "tetratide-labs-bpc-157-lyophilized-vial-10mg-pen-kit",
+  "schema_version": "1.0.0",
+  "compound_id": "bpc-157",
+  "provider_id": "tetratide-labs",
+  "product_url": "https://www.tetratidelabs.co.za/product-page/bpc-157-re-usable-metal-pen-kit",
+  "title_on_page": "BPC-157 10mg Reusable Pen Kit",
+  "form": "lyophilized_vial",
+  "route": "injectable_subq",
+  "strength": "10 mg",
+  "pack_size": "vial, reconstitution kit, alcohol swabs, reusable precision pen",
+  "price_zar": 1050,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": false,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "A complete 10mg peptide pen kit supplied with a reusable precision pen and reconstitution accessories.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.tetratidelabs.co.za/product-page/bpc-157-re-usable-metal-pen-kit",
+      "title": "BPC-157 10mg Reusable Pen Kit",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "seen_live"
+}

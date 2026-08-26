@@ -1,0 +1,33 @@
+{
+  "id": "reschem-semax-nasal-spray-30mg",
+  "schema_version": "1.0.0",
+  "compound_id": "semax",
+  "provider_id": "reschem",
+  "product_url": "https://reschem.co.za/products/semax-south-africa",
+  "title_on_page": "Semax Peptide - 30mg Nasal Spray",
+  "form": "nasal_spray",
+  "route": "nasal",
+  "strength": "30 mg",
+  "pack_size": null,
+  "price_zar": 1099,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": null,
+  "coa_stated": true,
+  "coa_url": "https://cdn.shopify.com/s/files/1/0704/2161/0749/files/Semax_COA.pdf?v=1770132214",
+  "coa_checked_on": "2026-08-26",
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "Semax is a compound predominantly used for its nootropic, neuroprotective, and neurorestorative properties.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://reschem.co.za/products/semax-south-africa",
+      "title": "Semax Peptide | Reschem",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Certificate of Analysis linked on the product page."
+    }
+  ],
+  "confidence": "seen_live"
+}

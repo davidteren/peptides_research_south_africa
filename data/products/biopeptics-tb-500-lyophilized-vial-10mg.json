@@ -1,0 +1,33 @@
+{
+  "id": "biopeptics-tb-500-lyophilized-vial-10mg",
+  "schema_version": "1.0.0",
+  "compound_id": "tb-500",
+  "provider_id": "biopeptics",
+  "product_url": "https://biopeptics.co.za/product/tb-500-thymosin-beta-4-10-mg",
+  "title_on_page": "TB-500 10mg (Thymosin Beta-4 Fragment) Recovery & Tissue-Maintenance Research Peptide",
+  "form": "lyophilized_vial",
+  "route": "injectable_subq",
+  "strength": "10 mg",
+  "pack_size": null,
+  "price_zar": 1200,
+  "price_checked_on": "2026-08-26",
+  "price_visible_without_login": true,
+  "in_stock": true,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "At BioPeptics, TB-500 is supplied in sterile lyophilized vial form for enhanced stability and is independently third-party tested for identity and purity verification.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://biopeptics.co.za/product/tb-500-thymosin-beta-4-10-mg",
+      "title": "TB-500 10mg (Thymosin Beta-4 Fragment) Recovery & Tissue-Maintenance Research Peptide",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "For Research Use Only. Page stated In stock."
+    }
+  ],
+  "confidence": "seen_live"
+}

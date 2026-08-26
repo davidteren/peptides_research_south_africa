@@ -1,0 +1,33 @@
+{
+  "id": "the-clinic-ghk-cu-cartridge-50mg",
+  "schema_version": "1.0.0",
+  "compound_id": "ghk-cu",
+  "provider_id": "the-clinic",
+  "product_url": "https://www.the-clinic.co.za/shop/GHK-Cu-50",
+  "title_on_page": "GHK-Cu 50 mg - 3ml Cartridge",
+  "form": "cartridge",
+  "route": "injectable_subq",
+  "strength": "50 mg",
+  "pack_size": "3 mL",
+  "price_zar": null,
+  "price_checked_on": null,
+  "price_visible_without_login": false,
+  "in_stock": true,
+  "coa_stated": false,
+  "coa_url": null,
+  "coa_checked_on": null,
+  "blend_compound_ids": [],
+  "vendor_claim_quote": "Supplied as a 50 mg cartridge in 3 mL, it provides a structured format within The Clinic cartridge system.",
+  "last_reviewed_at": "2026-08-26",
+  "reviewer": "grok",
+  "sources": [
+    {
+      "url": "https://www.the-clinic.co.za/shop/GHK-Cu-50",
+      "title": "GHK-Cu 50 mg - 3ml Cartridge",
+      "accessed_at": "2026-08-26",
+      "kind": "vendor",
+      "quote": "Availability: In Stock. Price not shown without login."
+    }
+  ],
+  "confidence": "seen_live"
+}
