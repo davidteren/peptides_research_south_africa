@@ -1,0 +1,47 @@
+STATUS.md
+  s_240773ee81a9c0::t_ff0f1ba5d47a90 6-7,24,53-54
+app/controllers/compounds_controller.rb
+  s_240773ee81a9c0::t_9ee2f50f13c8ac 3,10-14
+app/helpers/application_helper.rb
+  s_240773ee81a9c0::t_b19a593e686733 38-78
+app/views/compounds/_browse_controls.html.erb
+  s_240773ee81a9c0::t_f0d35c82c8ee6f 1-84
+app/views/compounds/_legal_flags.html.erb
+  s_240773ee81a9c0::t_dfe618ac99f933 22,54
+app/views/compounds/index.html.erb
+  s_240773ee81a9c0::t_beebca4c3f468e 7-9,11-17,28
+app/views/compounds/show.html.erb
+  s_240773ee81a9c0::t_80dbd24a47f83b 11-15,81
+app/views/providers/index.html.erb
+  s_240773ee81a9c0::t_0264bb89fc2690 20
+app/views/providers/show.html.erb
+  s_240773ee81a9c0::t_030d74134ce20e 10,52
+config/locales/en.yml
+  s_240773ee81a9c0::t_6706b27d2773b9 49-81
+e2e/compound-browse.spec.ts
+  s_240773ee81a9c0::t_0ba0c2d14e5c27 1-24
+lib/catalog/compound_browse.rb
+  s_240773ee81a9c0::t_001473b576a748 1-73
+test/helpers/application_helper_test.rb
+  s_240773ee81a9c0::t_b7ea5a3cc4fe10 30-41
+test/integration/catalog_browse_test.rb
+  s_240773ee81a9c0::t_e6d7238e618d8a 23-26,28-56,64-65,69-83,184
+test/models/catalog_compound_browse_test.rb
+  s_240773ee81a9c0::t_60eea0e969ed24 1-75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "4e97d833a83f54b384f7a5abf0522508b908b628",
+  "prompts": {},
+  "sessions": {
+    "s_240773ee81a9c0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b30a1cc4-bb8a-4143-acae-92deba078818",
+        "model": "claude-opus-5"
+      },
+      "human_author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
