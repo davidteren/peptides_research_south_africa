@@ -3,8 +3,8 @@
 ## Last session handoff
 
 **What this is:** A public South Africa research catalog for peptides, nootropics, and local providers.
-**What we finished:** Listings compare form, origin, and price date. A COA is a vendor claim, not a hosted file.
-**What you do next:** Build the agent research workflow from plan 005. `#51`
+**What we finished:** The catalog readme is the operator loop. A human can block a grade raise.
+**What you do next:** Make the catalog installable as a home-screen app from plan 006. `#65`
 
 _Last updated: 2026-08-30. Read this, then [AGENTS.md](AGENTS.md) and the `docs/` suite._
 
@@ -22,7 +22,7 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. Public nam
 | **EP-03 Providers and products** | Eight providers, 38 live listings, comparison table, and COA-stated flag (`#37` `#39`). |
 | **EP-04 Legal and athlete flags** | Flags on compound pages (plan 001). Stories `#9` `#10` `#11` `#13` `#15` `#18` `#21`. |
 | **EP-05 Search, browse, last-verified** | Search, chips, and Checked stamps are on `main` (plan 002). |
-| **EP-07 Agent research workflow** | Plan ready: [2026-08-30-005](docs/plans/2026-08-30-005-feat-agent-research-workflow-plan.md). |
+| **EP-07 Agent research workflow** | Readme loop, bans, and grade-review checklist are on `main` (`#58` `#59` `#61` `#62` `#63` `#64`). |
 | **EP-06 PWA and device-local saves** | Plan ready: [2026-08-30-006](docs/plans/2026-08-30-006-feat-pwa-and-device-saves-plan.md). |
 | **EP-08 Stacks** | Phase 4 plan: [2026-08-30-007](docs/plans/2026-08-30-007-feat-stack-checker-and-named-stacks-plan.md). F-20 helper: [2026-08-30-008](docs/plans/2026-08-30-008-feat-research-arithmetic-helper-plan.md). |
 | **EP-09 Accounts and native wrapper** | Plan ready: [2026-08-30-009](docs/plans/2026-08-30-009-feat-accounts-and-native-wrapper-plan.md). Native unit waits for EP-06. |
@@ -44,13 +44,14 @@ Needs Ruby 3.4.9 (rbenv) and local PostgreSQL. `DB_HOST` is only for the contrib
 ## How work is done here (see AGENTS.md)
 
 - Catalog facts live in `data/` JSON. Agents update files, not the database.
+- Add or refresh records from [`data/README.md`](data/README.md). Grade raises go through [`docs/research/grade-review.md`](docs/research/grade-review.md).
 - Every compound `summary` needs a literature or regulator citation. Vendor copy is not enough.
 - Typical amounts are **commonly reported research protocols**, never instructions.
 - Chat may only use IDs from this board, the PRD (F-1 to F-23), the epics (EP-01 to EP-09), or the roadmap phases.
 
 ## What you do next
 
-1. Open BPC-157 listings and read the comparison table and a stated COA row.
-2. Build the agent research workflow from plan 005 (`#51`).
+1. Open `data/README.md` and add the next compound from that file alone.
+2. Make the catalog installable as a home-screen app from plan 006 (`#65`).
 
 Tracker: this file plus GitHub issues and milestones. Do not invent private IDs.

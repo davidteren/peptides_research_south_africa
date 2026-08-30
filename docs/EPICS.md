@@ -188,12 +188,12 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. No epic ma
 
 **Stories**
 
-1. Write the catalog readme: copy a template, keep keys, add sources, set the date to the day the URL was opened, run the check — **M**
-2. Document citation rules: compound summary needs regulator or literature sources; vendor URLs are for products only — **S**
-3. Document the first-drop order and the "open the URL in session, do not guess" rule — **S**
-4. State the bans: no live scrape farm, no bulk PMC download, no Examine.com scrape — **S**
-5. Add a human review pass for evidence grades before publish — **M**
-6. Confirm the merge check from EP-01 is the gate this loop points at — **S**
+1. Write the catalog readme: copy a template, keep keys, add sources, set the date to the day the URL was opened, run the check — **M**. On `main` (plan 2026-08-30-005).
+2. Document citation rules: compound summary needs regulator or literature sources; vendor URLs are for products only — **S**. On `main` (plan 2026-08-30-005).
+3. Document the first-drop order and the "open the URL in session, do not guess" rule — **S**. On `main` (plan 2026-08-30-005).
+4. State the bans: no live scrape farm, no bulk PMC download, no Examine.com scrape — **S**. On `main` (plan 2026-08-30-005).
+5. Add a human review pass for evidence grades before publish — **M**. On `main` (plan 2026-08-30-005).
+6. Confirm the merge check from EP-01 is the gate this loop points at — **S**. On `main` (plan 2026-08-30-005).
 
 **Dependencies:** EP-01 (rules, templates, merge check). Can run in parallel with EP-02 and EP-03. Should exist before a large agent write.
 **Definition of done:** A new agent can add a compound from the readme alone. Invalid JSON, missing date, or empty sources fail the check. Vendor-only summaries are documented as invalid. No scrape farm is in the repo.
@@ -330,6 +330,7 @@ Afrikaans and isiZulu are later, not a first-release goal.
 
 ## Changelog
 
+- 2026-08-30: EP-07 operator loop landed: catalog readme, bans, live merge-check pointer, and grade-review checklist (plan 2026-08-30-005).
 - 2026-08-30: Comparison table (F-9) and COA-stated flag UI (F-11) landed on `main` (plan 2026-08-30-004).
 - 2026-08-25: EP-03 phase exception: comparison table (F-9) and COA-stated flag UI (F-11) wait for Phase 2; provider and product pages stay Phase 1.
 - 2026-08-25: Consistency pass. F-8 card stamp waits for Phase 2; index still lists the stored grade in Phase 1 (F-2). F-20 stays in EP-08 and is not started until Phase 5. Coverage table now includes phase. ROADMAP is linked. What/Why/How kept free of file paths.
