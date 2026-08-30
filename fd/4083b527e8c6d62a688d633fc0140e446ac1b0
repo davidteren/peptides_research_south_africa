@@ -1,0 +1,33 @@
+STATUS.md
+  s_240773ee81a9c0::t_20ef70f8affbe2 6-7,9,20-27,52
+docs/intent-engineering/2026-08-30-validate-plan-phase-2.md
+  s_240773ee81a9c0::t_620956114a702e 1-87
+docs/loops/INDEX-phase-2-plans.md
+  s_240773ee81a9c0::t_6a8b176a063fe2 1-47
+docs/plans/2026-08-30-001-feat-legal-athlete-flags-plan.md
+  s_240773ee81a9c0::t_113ee8eed5c342 1-234
+docs/plans/2026-08-30-002-feat-search-browse-verified-plan.md
+  s_240773ee81a9c0::t_c6633766d7aba9 1-258
+docs/plans/2026-08-30-003-feat-vendor-gate-and-evidence-stamp-plan.md
+  s_240773ee81a9c0::t_146c6f0df5b6bc 1-180
+docs/plans/2026-08-30-004-feat-comparison-table-and-coa-plan.md
+  s_240773ee81a9c0::t_176e25e6632c7d 1-213
+docs/plans/2026-08-30-005-feat-agent-research-workflow-plan.md
+  s_240773ee81a9c0::t_77afe09a01a299 1-152
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "fd4083b527e8c6d62a688d633fc0140e446ac1b0",
+  "prompts": {},
+  "sessions": {
+    "s_240773ee81a9c0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b30a1cc4-bb8a-4143-acae-92deba078818",
+        "model": "claude-opus-5"
+      },
+      "human_author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
