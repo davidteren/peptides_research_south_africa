@@ -39,4 +39,14 @@ class ApplicationHelperTest < ActionView::TestCase
   test "needs_review is false when date is blank" do
     refute needs_review?(nil)
   end
+
+  test "primary_citation prefers pmid from primary literature" do
+    compound = Struct.new(:payload).new({
+      "sources" => [
+        { "kind" => "vendor", "title" => "Shop" },
+        { "kind" => "primary_literature", "title" => "Paper", "pmid" => "14554208" }
+      ]
+    })
+    assert_equal "14554208", primary_citation(compound)
+  end
 end

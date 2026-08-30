@@ -20,6 +20,15 @@
     <% @compounds.each do |compound| %>
       <li id="compound-card-<%= compound.slug %>" data-testid="compound-card" class="py-4">
         <%= link_to compound.name, compound_path(compound), id: "compound-link-#{compound.slug}", class: "text-lg font-medium underline" %>
+        <p id="compound-stamp-<%= compound.slug %>" class="mt-2 inline-block border border-stone-300 px-2 py-1 text-sm">
+          <%= evidence_grade_label(compound.evidence_grade) %>
+        </p>
+        <% citation = primary_citation(compound) %>
+        <% if citation.present? %>
+          <p id="compound-stamp-citation-<%= compound.slug %>" class="mt-1 text-sm text-stone-600">
+            <%= t("compounds.stamp_citation", citation: citation) %>
+          </p>
+        <% end %>
         <p class="mt-1 text-sm text-stone-600">
           <%= t("compounds.classification") %>: <%= compound.classification %>
           · <%= t("compounds.routes") %>: <%= catalog_routes(compound) %>

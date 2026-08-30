@@ -19,6 +19,7 @@ en:
     classification: "Class"
     routes: "Routes studied"
     evidence: "Evidence grade"
+    stamp_citation: "Source: %{citation}"
     aliases: "Also known as"
     summary: "What it is"
     uses: "Research uses"

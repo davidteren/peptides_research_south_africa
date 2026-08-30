@@ -39,6 +39,123 @@ class CatalogValidatorTest < ActiveSupport::TestCase
     end
   end
 
+  test "rejects a compound whose summary sources are only vendor" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(root, sources: [ vendor_source ])
+
+      result = Catalog::Validator.check(root: root)
+      refute result.ok
+      assert_includes result.errors.join, "summary sources"
+    end
+  end
+
+  test "rejects a compound whose summary sources are only encyclopedia" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(root, sources: [ encyclopedia_source ])
+
+      result = Catalog::Validator.check(root: root)
+      refute result.ok
+      assert_includes result.errors.join, "summary sources"
+    end
+  end
+
+  test "rejects a compound whose summary sources are only review" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(root, sources: [ review_source ])
+
+      result = Catalog::Validator.check(root: root)
+      refute result.ok
+      assert_includes result.errors.join, "summary sources"
+    end
+  end
+
+  test "accepts a compound with primary_literature plus vendor sources" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(root, sources: [ literature_source, vendor_source ])
+
+      result = Catalog::Validator.check(root: root)
+      assert result.ok, result.errors.join("\n")
+    end
+  end
+
+  test "rejects a research use whose sources are only vendor" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(
+        root,
+        sources: [ literature_source ],
+        research_uses: [ { use: "claimed", evidence_grade: "anecdotal", sources: [ vendor_source ] } ]
+      )
+
+      result = Catalog::Validator.check(root: root)
+      refute result.ok
+      assert_includes result.errors.join, "research_uses[0]"
+    end
+  end
+
+  test "accepts a research use with a review source" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(
+        root,
+        sources: [ literature_source ],
+        research_uses: [ { use: "reviewed use", evidence_grade: "preclinical", sources: [ review_source ] } ]
+      )
+
+      result = Catalog::Validator.check(root: root)
+      assert result.ok, result.errors.join("\n")
+    end
+  end
+
+  test "rejects a research use with missing sources" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(
+        root,
+        sources: [ literature_source ],
+        research_uses: [ { use: "claimed", evidence_grade: "anecdotal" } ]
+      )
+
+      result = Catalog::Validator.check(root: root)
+      refute result.ok
+      assert_includes result.errors.join, "research_uses[0] sources"
+    end
+  end
+
+  test "product records may cite vendor sources only" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(root, sources: [ literature_source ])
+      write_minimal_provider(root)
+      root.join("products").mkpath
+      root.join("products/reschem-bad-capsule-10mg.json").write({
+        id: "reschem-bad-capsule-10mg",
+        schema_version: "1.0.0",
+        compound_id: "ok-compound",
+        provider_id: "reschem",
+        product_url: "https://example.co.za/p",
+        title_on_page: "Listed",
+        form: "capsule",
+        route: "oral",
+        strength: "10 mg",
+        price_zar: nil,
+        price_visible_without_login: true,
+        coa_stated: false,
+        last_reviewed_at: "2026-08-26",
+        reviewer: "test",
+        sources: [ vendor_source ],
+        confidence: "unverified"
+      }.to_json)
+
+      result = Catalog::Validator.check(root: root)
+      assert result.ok, result.errors.join("\n")
+    end
+  end
+
   test "rejects a product whose compound is missing" do
     Dir.mktmpdir do |dir|
       root = Pathname(dir)
@@ -71,7 +188,50 @@ class CatalogValidatorTest < ActiveSupport::TestCase
   end
 
   private
+    def literature_source
+      { url: "https://pubmed.ncbi.nlm.nih.gov/1/", title: "Paper", accessed_at: "2026-08-26", kind: "primary_literature", pmid: "1" }
+    end
+
+    def vendor_source
+      { url: "https://example.co.za/p", title: "Shop", accessed_at: "2026-08-26", kind: "vendor" }
+    end
+
+    def encyclopedia_source
+      { url: "https://en.wikipedia.org/wiki/Example", title: "Wiki", accessed_at: "2026-08-26", kind: "encyclopedia" }
+    end
+
+    def review_source
+      { url: "https://pubmed.ncbi.nlm.nih.gov/2/", title: "Review", accessed_at: "2026-08-26", kind: "review" }
+    end
+
+    def write_compound(root, sources:, research_uses: [])
+      compounds = root.join("compounds")
+      compounds.mkpath
+      compounds.join("ok-compound.json").write({
+        id: "ok-compound",
+        schema_version: "1.0.0",
+        name: "Ok",
+        aliases: [],
+        class: "other",
+        categories: [ "other" ],
+        summary: "x",
+        research_uses: research_uses,
+        reported_protocols: [],
+        routes_studied: [],
+        forms: [],
+        evidence_grade: "anecdotal",
+        sahpra: {},
+        wada: nil,
+        stack_pair_notes: [],
+        last_reviewed_at: "2026-08-26",
+        reviewer: "test",
+        sources: sources,
+        confidence: "unverified"
+      }.to_json)
+    end
+
     def write_minimal_provider(root)
+      root.join("providers").mkpath
       root.join("providers/reschem.json").write({
         id: "reschem",
         schema_version: "1.0.0",

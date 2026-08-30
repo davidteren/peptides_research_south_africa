@@ -40,13 +40,15 @@ This catalog is informational. It is not medical advice. It is not legal advice.
 4. A non-null price needs `price_checked_on`.
 5. `coa_stated` means the provider states a certificate. Do not host PDFs. Do not score purity.
 
-## Rules that fail a future merge check
+## Rules that fail `bin/rails catalog:check`
 
 - Invalid JSON
 - Missing `last_reviewed_at`
 - Empty `sources`
 - Deleted required keys
 - Rumour records on the public index without a curator note
+- Compound summary sources that are only vendor, encyclopedia, review, or news (need `regulator` or `primary_literature`)
+- A present research use whose sources are only vendor or encyclopedia
 
 Touch `last_reviewed_at` only when you opened the cited URL in that session.
 
@@ -60,5 +62,6 @@ Products: only after the matching compound file exists, and only where a live pa
 
 ## Changelog
 
+- 2026-08-30: Merge check rejects vendor-only and encyclopedia-only compound summaries.
 - 2026-08-26: Six starter compound files with literature, SAHPRA, and WADA citations.
 - 2026-08-25: Schema, templates, and first eight provider files. No compound research yet.

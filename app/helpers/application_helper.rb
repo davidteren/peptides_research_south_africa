@@ -76,4 +76,13 @@ module ApplicationHelper
   def missing_alias_report_url(query)
     "https://github.com/davidteren/peptides_research_south_africa/issues/new?title=#{ERB::Util.url_encode("Missing alias: #{query}")}"
   end
+
+  def primary_citation(compound)
+    sources = Array(compound.payload&.dig("sources")).select { |source| source.is_a?(Hash) }
+    preferred = sources.find { |source| %w[regulator primary_literature].include?(source["kind"]) }
+    preferred ||= sources.find { |source| source["kind"] == "review" }
+    return if preferred.blank?
+
+    preferred["pmid"].presence || preferred["title"]
+  end
 end

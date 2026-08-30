@@ -25,6 +25,9 @@ class CatalogBrowseTest < ActionDispatch::IntegrationTest
     assert_select "#compound-search-submit"
     assert_select "#filter-route-injectable"
     assert_match "Preclinical", response.body
+    assert_select "#compound-stamp-bpc-157", text: /Preclinical/
+    assert_select "#compound-stamp-citation-bpc-157"
+    assert_select "[data-testid=efficacy-stars]", count: 0
     assert_no_match(/cheapest/i, response.body)
   end
 

@@ -11,6 +11,8 @@ module Catalog
     DATE = /\A\d{4}-\d{2}-\d{2}\z/
     KEBAB = /\A[a-z0-9]+(?:-[a-z0-9]+)*\z/
     SCHEMA_VERSION = "1.0.0"
+    SUMMARY_SOURCE_KINDS = %w[regulator primary_literature].freeze
+    RESEARCH_USE_SOURCE_KINDS = %w[regulator primary_literature review].freeze
 
     Result = Struct.new(:ok, :errors, keyword_init: true)
 
@@ -80,9 +82,39 @@ module Catalog
         errors << "#{relative}: non-null price_zar needs price_checked_on"
       end
 
+      errors.concat(check_compound_citations(relative, data)) if type == "compound"
+
       errors
     rescue JSON::ParserError => e
       [ "#{relative}: invalid JSON (#{e.message})" ]
+    end
+
+    def check_compound_citations(relative, data)
+      errors = []
+      kinds = source_kinds(data["sources"])
+      unless kinds.intersect?(SUMMARY_SOURCE_KINDS)
+        errors << "#{relative}: summary sources need regulator or primary_literature"
+      end
+
+      Array(data["research_uses"]).each_with_index do |use, i|
+        next unless use.is_a?(Hash)
+
+        sources = use["sources"]
+        if !sources.is_a?(Array) || sources.empty?
+          errors << "#{relative}: research_uses[#{i}] sources must have at least one entry"
+          next
+        end
+
+        unless source_kinds(sources).intersect?(RESEARCH_USE_SOURCE_KINDS)
+          errors << "#{relative}: research_uses[#{i}] sources need regulator, primary_literature, or review"
+        end
+      end
+
+      errors
+    end
+
+    def source_kinds(sources)
+      Array(sources).filter_map { |source| source["kind"] if source.is_a?(Hash) }
     end
 
     def check_product_refs(ids)
