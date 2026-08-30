@@ -1,0 +1,42 @@
+STATUS.md
+  h_e8a5bb9272fa34 6-7,15,22,53-54
+app/controllers/compounds_controller.rb
+  h_e8a5bb9272fa34 8
+app/controllers/providers_controller.rb
+  h_e8a5bb9272fa34 8
+app/helpers/application_helper.rb
+  h_e8a5bb9272fa34 88-125
+app/views/compounds/show.html.erb
+  h_e8a5bb9272fa34 73-77
+app/views/products/_comparison_row.html.erb
+  h_e8a5bb9272fa34 1-42
+app/views/products/_comparison_table.html.erb
+  h_e8a5bb9272fa34 1-22
+app/views/providers/show.html.erb
+  h_e8a5bb9272fa34 44-48
+config/locales/en.yml
+  h_e8a5bb9272fa34 83-103
+docs/EPICS.md
+  h_e8a5bb9272fa34 64,90-91,333
+e2e/compound-comparison.spec.ts
+  h_e8a5bb9272fa34 1-9
+lib/catalog/listing_order.rb
+  h_e8a5bb9272fa34 1-30
+test/helpers/application_helper_test.rb
+  h_e8a5bb9272fa34 52-101
+test/integration/catalog_browse_test.rb
+  h_e8a5bb9272fa34 196-249
+test/models/catalog_listing_order_test.rb
+  h_e8a5bb9272fa34 1-93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "d9ca7ff5de4cc45fc0bcb6d0f9fc8dc1ae1fed5c",
+  "prompts": {},
+  "humans": {
+    "h_e8a5bb9272fa34": {
+      "author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
