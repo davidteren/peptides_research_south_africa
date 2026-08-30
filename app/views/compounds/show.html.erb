@@ -9,6 +9,8 @@
     · <%= t("compounds.evidence") %>: <%= evidence_grade_label(@compound.evidence_grade) %>
   </p>
 
+  <%= render "legal_flags" %>
+
   <section class="mt-6">
     <h2 class="font-semibold"><%= t("compounds.summary") %></h2>
     <p id="compound-summary" class="mt-2 max-w-2xl"><%= @compound.summary %></p>
@@ -70,6 +72,11 @@
             · <%= product.form %> · <%= product.strength %>
             <% if product.price_zar.present? && product.price_visible_without_login? %>
               · R<%= product.price_zar %>
+            <% end %>
+            <% if non_sa_shipper?(product.provider) %>
+              <p id="listing-import-note-<%= product.slug %>" class="mt-1 text-sm text-stone-600">
+                <%= t("compounds.import_rule") %>
+              </p>
             <% end %>
           </li>
         <% end %>

@@ -1,0 +1,64 @@
+<% payload = @compound.payload || {} %>
+<% sahpra = payload["sahpra"] || {} %>
+<% wada = payload["wada"] %>
+<% sahpra_numbers = Array(sahpra["registration_numbers"]) %>
+
+<section id="compound-legal-flags" class="mt-4 space-y-3">
+  <section id="compound-wada" class="border border-stone-200 bg-white p-3 text-sm">
+    <h2 class="font-semibold"><%= t("compounds.wada_heading") %></h2>
+    <% if wada.nil? %>
+      <p id="compound-wada-empty" class="mt-1"><%= t("compounds.wada_empty") %></p>
+    <% else %>
+      <p id="compound-wada-prohibited" class="mt-1"><%= wada_prohibited_label(wada["prohibited"]) %></p>
+      <% if wada["class"].present? %>
+        <p id="compound-wada-class"><%= t("compounds.wada_class") %>: <%= wada["class"] %></p>
+      <% end %>
+      <% if wada["list_year"].present? %>
+        <p id="compound-wada-year"><%= t("compounds.wada_year") %>: <%= wada["list_year"] %></p>
+      <% end %>
+      <% if wada["notes"].present? %>
+        <p id="compound-wada-note" class="mt-1 text-stone-700"><%= wada["notes"] %></p>
+      <% end %>
+      <% checked = payload_date(wada) %>
+      <% if checked.present? %>
+        <p id="compound-wada-checked" class="mt-1 text-stone-600"><%= t("compounds.checked", date: checked) %></p>
+      <% end %>
+    <% end %>
+    <p class="mt-1">
+      <%= link_to t("compounds.wada_link"), "https://www.wada-ama.org/en/prohibited-list", id: "compound-wada-link", class: "underline" %>
+    </p>
+    <p id="compound-saids" class="mt-1 text-stone-600"><%= t("compounds.saids") %></p>
+  </section>
+
+  <section id="compound-sahpra" class="border border-stone-200 bg-white p-3 text-sm">
+    <h2 class="font-semibold"><%= t("compounds.sahpra_heading") %></h2>
+    <p id="compound-sahpra-registered" class="mt-1">
+      <%= t("compounds.sahpra_registered") %>: <%= registered_medicine_label(sahpra["registered_medicine"]) %>
+    </p>
+    <% if sahpra_numbers.any? %>
+      <p id="compound-sahpra-registration-numbers">
+        <%= t("compounds.sahpra_registration_numbers") %>: <%= sahpra_numbers.join(", ") %>
+      </p>
+    <% end %>
+    <% if sahpra["schedule"].present? %>
+      <p id="compound-sahpra-schedule">
+        <%= t("compounds.sahpra_schedule") %>: <%= sahpra["schedule"] %>
+      </p>
+    <% end %>
+    <% if sahpra["on_unregistered_warning_list"] %>
+      <p id="compound-sahpra-warning" class="mt-1"><%= t("compounds.sahpra_warning") %></p>
+    <% end %>
+    <% if sahpra["notes"].present? %>
+      <p id="compound-sahpra-notes" class="mt-1 text-stone-700"><%= sahpra["notes"] %></p>
+    <% end %>
+    <p class="mt-1">
+      <%= link_to t("compounds.sahpra_link"), "https://www.sahpra.org.za/peptide-products-public-information/", id: "compound-sahpra-link", class: "underline" %>
+    </p>
+    <% sahpra_checked = payload_date(sahpra) %>
+    <% if sahpra_checked.present? %>
+      <p id="compound-sahpra-checked" class="mt-1 text-stone-600"><%= t("compounds.checked", date: sahpra_checked) %></p>
+    <% end %>
+  </section>
+
+  <p id="compound-legal-disclaimer" class="text-sm text-stone-700"><%= t("compounds.legal_disclaimer") %></p>
+</section>

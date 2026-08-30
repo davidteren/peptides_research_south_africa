@@ -3,8 +3,8 @@
 ## Last session handoff
 
 **What this is:** A public South Africa research catalog for peptides, nootropics, and local providers.
-**What we finished:** How-to plans for every remaining epic (EP-04 through EP-09, plus the arithmetic helper).
-**What you do next:** Build EP-04 legal flags from plan 001. `#7`
+**What we finished:** Compound pages now show SAHPRA and WADA flags, SAIDS, and the import rule for non-SA shippers.
+**What you do next:** Build EP-05 search and last-verified stamps from plan 002. `#6`
 
 _Last updated: 2026-08-30. Read this, then [AGENTS.md](AGENTS.md) and the `docs/` suite._
 
@@ -20,7 +20,7 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. Public nam
 | **EP-01 Foundation** | JSON check, import, nav, and disclaimer are in. `#47` vendor-only summary gate has a plan (2026-08-30-003). |
 | **EP-02 Compound catalog** | Six cited compounds with index and detail pages. Card stamp `#49` and `#47` share plan 2026-08-30-003. |
 | **EP-03 Providers and products** | Eight providers, 38 live listings, provider pages. Comparison `#37` and COA `#39` share plan 2026-08-30-004. |
-| **EP-04 Legal and athlete flags** | Plan ready: [2026-08-30-001](docs/plans/2026-08-30-001-feat-legal-athlete-flags-plan.md). Issues still open. |
+| **EP-04 Legal and athlete flags** | Flags on compound pages (plan 001). Stories `#9` `#10` `#11` `#13` `#15` `#18` `#21`. |
 | **EP-05 Search, browse, last-verified** | Plan ready: [2026-08-30-002](docs/plans/2026-08-30-002-feat-search-browse-verified-plan.md). Issues still open. |
 | **EP-07 Agent research workflow** | Plan ready: [2026-08-30-005](docs/plans/2026-08-30-005-feat-agent-research-workflow-plan.md). |
 | **EP-06 PWA and device-local saves** | Plan ready: [2026-08-30-006](docs/plans/2026-08-30-006-feat-pwa-and-device-saves-plan.md). |
@@ -50,7 +50,7 @@ Needs Ruby 3.4.9 (rbenv) and local PostgreSQL. `DB_HOST` is only for the contrib
 
 ## What you do next
 
-1. Browse the catalog locally with `bin/dev`.
-2. Implement EP-04 from `docs/plans/2026-08-30-001-feat-legal-athlete-flags-plan.md` (`#7`). `#47` stays open until plan 003 is built.
+1. Browse a compound page and read the SAHPRA and WADA flags.
+2. Build EP-05 from `docs/plans/2026-08-30-002-feat-search-browse-verified-plan.md` (`#6`). `#47` stays open until plan 003 is built.
 
 Tracker: this file plus GitHub issues and milestones. Do not invent private IDs.

@@ -34,9 +34,10 @@ bin/dev     # (re)boots on http://localhost:3000
 ```sh
 bin/rails test    # Minitest
 bin/rubocop       # lint
+npx playwright test
 ```
 
-Playwright e2e lives in `e2e/` once catalog screens exist. Select elements by stable DOM id only. See [AGENTS.md](AGENTS.md).
+Playwright specs live in `e2e/`. Select elements by stable DOM id only. See [AGENTS.md](AGENTS.md). `bin/ci` does not run Playwright yet.
 
 ## Catalog data
 
