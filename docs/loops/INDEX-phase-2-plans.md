@@ -30,7 +30,7 @@ This is the runbook for writing implementation plans. It does not implement app 
 - [x] P2-PLAN-04 · Comparison table and COA-stated flag · `#37` `#39` · status:done · result: `docs/plans/2026-08-30-004-feat-comparison-table-and-coa-plan.md`
 - [x] P2-PLAN-05 · EP-07 Agent research workflow · `#51` `#58` `#59` `#61` `#62` `#63` `#64` · status:done · result: `docs/plans/2026-08-30-005-feat-agent-research-workflow-plan.md`
 
-Do not plan in this loop: EP-06 PWA (`#56`), EP-08 stacks (`#60`), EP-09 accounts (`#50`), F-20 arithmetic helper (`#76` `#77`).
+Later epics (EP-06, EP-08, EP-09, F-20) moved to `docs/loops/INDEX-later-plans.md`.
 
 ## How to run one item
 
