@@ -5,7 +5,7 @@ class CompoundsController < ApplicationController
 
   def show
     @compound = Compound.public_index.find_by!(slug: params[:id])
-    @products = @compound.products.includes(:provider).order(:title_on_page)
+    @products = Catalog::ListingOrder.new(@compound.products.includes(:provider)).records
   end
 
   private

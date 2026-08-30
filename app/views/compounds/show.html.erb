@@ -70,23 +70,11 @@
     <% if @products.empty? %>
       <p id="compound-listings-empty" class="mt-2 text-stone-600"><%= t("compounds.listings_empty") %></p>
     <% else %>
-      <ul id="compound-listings" class="mt-2 divide-y divide-stone-200">
-        <% @products.each do |product| %>
-          <li id="compound-listing-<%= product.slug %>" data-testid="product-row" class="py-3">
-            <%= link_to product.provider.name, provider_path(product.provider), class: "underline" %>
-            · <%= product.form %> · <%= product.strength %>
-            <% if product.price_zar.present? && product.price_visible_without_login? %>
-              · R<%= product.price_zar %>
-            <% end %>
-            <%= checked_stamp(product.last_reviewed_at, id: "listing-checked-#{product.slug}") %>
-            <% if non_sa_shipper?(product.provider) %>
-              <p id="listing-import-note-<%= product.slug %>" class="mt-1 text-sm text-stone-600">
-                <%= t("compounds.import_rule") %>
-              </p>
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
+      <%= render "products/comparison_table",
+            table_id: "compound-comparison",
+            row_id_prefix: "compound-listing",
+            identity: :provider,
+            products: @products %>
     <% end %>
   </section>
 </article>

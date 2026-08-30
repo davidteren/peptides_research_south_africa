@@ -1,0 +1,22 @@
+<%# locals: table_id, row_id_prefix, identity, products %>
+<div class="mt-2 overflow-x-auto">
+  <table id="<%= table_id %>" class="w-full min-w-[48rem] border-collapse text-left text-sm">
+    <thead>
+      <tr class="border-b border-stone-300">
+        <th id="comparison-col-identity" scope="col" class="py-2 pr-4 font-semibold">
+          <%= identity == :provider ? t("products.identity_provider") : t("products.identity_compound") %>
+        </th>
+        <th id="comparison-col-form" scope="col" class="py-2 pr-4 font-semibold"><%= t("products.form") %></th>
+        <th id="comparison-col-route" scope="col" class="py-2 pr-4 font-semibold"><%= t("products.route") %></th>
+        <th id="comparison-col-price" scope="col" class="py-2 pr-4 font-semibold"><%= t("products.price") %></th>
+        <th id="comparison-col-ships-from" scope="col" class="py-2 pr-4 font-semibold"><%= t("products.ships_from") %></th>
+        <th id="comparison-col-cold-chain" scope="col" class="py-2 font-semibold"><%= t("products.cold_chain") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.each do |product| %>
+        <%= render "products/comparison_row", product: product, row_id_prefix: row_id_prefix, identity: identity %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

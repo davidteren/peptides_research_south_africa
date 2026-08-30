@@ -1,0 +1,42 @@
+<%# locals: product, row_id_prefix, identity %>
+<tr id="<%= row_id_prefix %>-<%= product.slug %>" data-testid="product-row" class="border-b border-stone-200 align-top">
+  <td class="py-3 pr-4">
+    <% if identity == :provider %>
+      <%= link_to product.provider.name, provider_path(product.provider), class: "underline" %>
+      <span class="text-stone-600"> (<%= provider_kind_label(product.provider.kind) %>)</span>
+    <% else %>
+      <%= link_to product.compound.name, compound_path(product.compound), class: "underline" %>
+    <% end %>
+    <p class="mt-1 text-stone-600">
+      <%= product.strength %>
+      <% pack = product.payload&.dig("pack_size") %>
+      <% if pack.present? %>
+        · <%= pack %>
+      <% end %>
+    </p>
+    <%= checked_stamp(product.last_reviewed_at, id: "listing-checked-#{product.slug}") %>
+    <% if identity == :provider && non_sa_shipper?(product.provider) %>
+      <p id="listing-import-note-<%= product.slug %>" class="mt-1 text-sm text-stone-600">
+        <%= t("compounds.import_rule") %>
+      </p>
+    <% end %>
+    <% if product.payload&.dig("coa_stated") %>
+      <p id="listing-coa-<%= product.slug %>" class="mt-1 text-sm text-stone-600">
+        <%= t("products.coa_stated") %>
+        <% url = product.payload["coa_url"] %>
+        <% if url.present? %>
+          <%= link_to t("products.coa_link"), url, id: "listing-coa-link-#{product.slug}", class: "underline", rel: "noopener noreferrer", target: "_blank" %>
+        <% end %>
+        <% checked = product.payload["coa_checked_on"] %>
+        <% if checked.present? %>
+          · <%= t("products.coa_checked", date: checked) %>
+        <% end %>
+      </p>
+    <% end %>
+  </td>
+  <td id="listing-form-<%= product.slug %>" class="py-3 pr-4 whitespace-nowrap"><%= product.form %></td>
+  <td id="listing-route-<%= product.slug %>" class="py-3 pr-4 whitespace-nowrap"><%= product.route %></td>
+  <td id="listing-price-<%= product.slug %>" class="py-3 pr-4 whitespace-nowrap"><%= listing_price_label(product) %></td>
+  <td id="listing-ships-from-<%= product.slug %>" class="py-3 pr-4"><%= ships_from_label(product.provider) %></td>
+  <td id="listing-cold-chain-<%= product.slug %>" class="py-3"><%= cold_chain_label(product.provider) %></td>
+</tr>

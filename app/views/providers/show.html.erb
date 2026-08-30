@@ -41,18 +41,11 @@
     <% if @products.empty? %>
       <p id="provider-listings-empty" class="mt-2 text-stone-600"><%= t("providers.listings_empty") %></p>
     <% else %>
-      <ul id="provider-listings" class="mt-2 divide-y divide-stone-200">
-        <% @products.each do |product| %>
-          <li id="provider-listing-<%= product.slug %>" data-testid="product-row" class="py-3">
-            <%= link_to product.compound.name, compound_path(product.compound), class: "underline" %>
-            · <%= product.form %> · <%= product.strength %>
-            <% if product.price_zar.present? && product.price_visible_without_login? %>
-              · R<%= product.price_zar %>
-            <% end %>
-            <%= checked_stamp(product.last_reviewed_at, id: "listing-checked-#{product.slug}") %>
-          </li>
-        <% end %>
-      </ul>
+      <%= render "products/comparison_table",
+            table_id: "provider-comparison",
+            row_id_prefix: "provider-listing",
+            identity: :compound,
+            products: @products %>
     <% end %>
   </section>
 </article>

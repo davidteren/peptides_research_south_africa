@@ -85,4 +85,42 @@ module ApplicationHelper
 
     preferred["pmid"].presence || preferred["title"]
   end
+
+  def ships_from_label(provider)
+    country = provider.payload&.dig("country").to_s.strip
+    return t("products.ships_from_unknown") if country.blank?
+
+    if country.casecmp?("ZA")
+      city = provider.city.presence
+      return city ? t("products.ships_from_za_city", city: city) : t("products.ships_from_za")
+    end
+
+    t("products.ships_from_abroad", region: country)
+  end
+
+  def cold_chain_label(provider)
+    case provider.payload&.dig("cold_chain")
+    when true then t("products.cold_chain_yes")
+    when false then t("products.cold_chain_no")
+    else t("products.cold_chain_unknown")
+    end
+  end
+
+  def listing_price_label(product)
+    return t("products.price_unknown") unless product.price_zar.present? && product.price_visible_without_login?
+
+    amount = format_listing_amount(product.price_zar)
+    date = product.payload&.dig("price_checked_on")
+    if date.present?
+      t("products.price_as_of", amount: amount, date: date)
+    else
+      t("products.price_amount", amount: amount)
+    end
+  end
+
+  private
+    def format_listing_amount(value)
+      number = BigDecimal(value.to_s)
+      number.frac.zero? ? number.to_i : value
+    end
 end

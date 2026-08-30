@@ -3,8 +3,8 @@
 ## Last session handoff
 
 **What this is:** A public South Africa research catalog for peptides, nootropics, and local providers.
-**What we finished:** Vendor-only summaries fail the merge check, and compound cards show an evidence-grade stamp.
-**What you do next:** Build the comparison table and COA-stated flag from plan 004. `#37`
+**What we finished:** Listings compare form, origin, and price date. A COA is a vendor claim, not a hosted file.
+**What you do next:** Build the agent research workflow from plan 005. `#51`
 
 _Last updated: 2026-08-30. Read this, then [AGENTS.md](AGENTS.md) and the `docs/` suite._
 
@@ -12,14 +12,14 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. Public nam
 
 ## Where we are
 
-**Phase 1 Honest catalog is in the app.** Loop: `docs/loops/INDEX-phase-1.md`. Phase 2 search and flags are next.
+**Phase 1 Honest catalog is in the app.** Phase 2 search, flags, comparison, and stamps are on `main`. Loop: `docs/loops/INDEX-phase-1.md`.
 
 | Board item | State |
 | --- | --- |
 | **Phase 1 · Honest catalog** | Compounds, providers, listings, import, and browse screens are on `main`. |
 | **EP-01 Foundation** | JSON check, import, nav, and disclaimer are in. `#47` vendor-only summary gate is on `main`. |
 | **EP-02 Compound catalog** | Six cited compounds with index, detail, and card stamp (`#49`). |
-| **EP-03 Providers and products** | Eight providers, 38 live listings, provider pages. Comparison `#37` and COA `#39` share plan 2026-08-30-004. |
+| **EP-03 Providers and products** | Eight providers, 38 live listings, comparison table, and COA-stated flag (`#37` `#39`). |
 | **EP-04 Legal and athlete flags** | Flags on compound pages (plan 001). Stories `#9` `#10` `#11` `#13` `#15` `#18` `#21`. |
 | **EP-05 Search, browse, last-verified** | Search, chips, and Checked stamps are on `main` (plan 002). |
 | **EP-07 Agent research workflow** | Plan ready: [2026-08-30-005](docs/plans/2026-08-30-005-feat-agent-research-workflow-plan.md). |
@@ -50,7 +50,7 @@ Needs Ruby 3.4.9 (rbenv) and local PostgreSQL. `DB_HOST` is only for the contrib
 
 ## What you do next
 
-1. Open the compounds index and read the evidence-grade stamp on a card.
-2. Build the comparison table and COA-stated flag from plan 004 (`#37` `#39`).
+1. Open BPC-157 listings and read the comparison table and a stated COA row.
+2. Build the agent research workflow from plan 005 (`#51`).
 
 Tracker: this file plus GitHub issues and milestones. Do not invent private IDs.

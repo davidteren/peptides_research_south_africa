@@ -193,4 +193,58 @@ class CatalogBrowseTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_no_match(/R[0-9]/, response.body)
   end
+
+  test "compound comparison table lists form origin price and has no buy control" do
+    product = Product.find_by!(slug: "reschem-bpc-157-blend-nasal-10mg")
+
+    get compound_path("bpc-157")
+    assert_response :success
+    assert_select "#compound-comparison"
+    assert_select "#comparison-col-form"
+    assert_select "#comparison-col-route"
+    assert_select "#comparison-col-price"
+    assert_select "#comparison-col-ships-from"
+    assert_select "#comparison-col-cold-chain"
+    assert_select "#compound-listing-#{product.slug}"
+    assert_select "#listing-form-#{product.slug}"
+    assert_select "#listing-route-#{product.slug}"
+    assert_select "#listing-price-#{product.slug}", text: /R999 as of 2026-08-26/
+    assert_select "#listing-ships-from-#{product.slug}", text: /South Africa/
+    assert_select "#listing-cold-chain-#{product.slug}", text: I18n.t("products.cold_chain_unknown")
+    assert_select "[id^=buy-]", count: 0
+    assert_no_match(/tested safe/i, response.body)
+    assert_no_match(/safe without cold-chain/i, response.body)
+  end
+
+  test "comparison table is not cheapest first" do
+    get compound_path("bpc-157")
+    assert_response :success
+    first_row = css_select("[data-testid=product-row]").first
+    assert first_row, "expected a comparison row"
+    assert_match(/compound-listing-biopeptics-bpc-157-lyophilized-vial-10mg/, first_row["id"])
+  end
+
+  test "stated COA listing links off-site and unstated listing has no COA claim" do
+    stated = Product.find_by!(slug: "reschem-bpc-157-blend-nasal-10mg")
+    unstated = Product.find_by!(slug: "biopeptics-bpc-157-lyophilized-vial-10mg")
+
+    get compound_path("bpc-157")
+    assert_response :success
+    assert_select "#listing-coa-#{stated.slug}", text: /Provider states a COA/
+    assert_select "#listing-coa-link-#{stated.slug}[href^='https://cdn.shopify.com']"
+    assert_select "#listing-coa-link-#{stated.slug}[rel='noopener noreferrer']"
+    assert_select "#listing-coa-#{unstated.slug}", count: 0
+    assert_no_match(/tested safe/i, response.body)
+  end
+
+  test "provider comparison table lists products without a buy control" do
+    product = Product.find_by!(slug: "reschem-bpc-157-blend-nasal-10mg")
+
+    get provider_path("reschem")
+    assert_response :success
+    assert_select "#provider-comparison"
+    assert_select "#provider-listing-#{product.slug}"
+    assert_select "#listing-form-#{product.slug}"
+    assert_select "[id^=buy-]", count: 0
+  end
 end

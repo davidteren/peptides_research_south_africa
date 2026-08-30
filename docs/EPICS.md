@@ -61,7 +61,7 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. No epic ma
 6. Add the starter compound set with literature citations: BPC-157, TB-500, Semax, Selank, GHK-Cu, Noopept — **L**
 7. Reject vendor-only sources for compound summary and research uses — **S**
 8. Show the shared disclaimer above the fold on every compound view (from EP-01) — **S**
-9. Card-level evidence-grade stamp: grade on the card, not only as a list fact or footnote; citations with the stamp; no fifth "promising" grade; no star rating of efficacy — **M**. Not started until Phase 2.
+9. Card-level evidence-grade stamp: grade on the card, not only as a list fact or footnote; citations with the stamp; no fifth "promising" grade; no star rating of efficacy — **M**. On `main` (plan 2026-08-30-003).
 
 **Dependencies:** EP-01 (rules, load path, disclaimer, navigation).
 **Definition of done:** Starter compounds appear on the index and detail pages. The index lists the stored evidence grade as a fact. Protocols are cited text, not a dose tool. Class is present for later filters and later stack checks. Empty catalog still shows an honest empty state. The card-level stamp is not done in the Phase 1 slice of this epic. This epic does not claim search or legal flags are done (EP-04, EP-05).
@@ -87,8 +87,8 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. No epic ma
 2. Label research storefronts as unregistered supply paths; never present them as licensed medicines — **S**
 3. Hide status down and excluded from the public index — **S**
 4. Show product listing rows: compound, provider, form, route, strength, pack, rand price, price date — **M**
-5. Build the comparison table: form, route, rand as-of, ships-from (ZA vs abroad), cold-chain; no buy button; default sort is not cheapest first — **M**. Not started until Phase 2.
-6. Show "provider states a COA" with URL and date; do not host PDFs; do not say tested safe — **S**. Not started until Phase 2.
+5. Build the comparison table: form, route, rand as-of, ships-from (ZA vs abroad), cold-chain; no buy button; default sort is not cheapest first — **M**. On `main` (plan 2026-08-30-004).
+6. Show "provider states a COA" with URL and date; do not host PDFs; do not say tested safe — **S**. On `main` (plan 2026-08-30-004).
 7. Add starter providers seen live: Reschem, BioPeptics, Tetratide Labs, The Clinic, Comp Pharm, AlphaHuman, NeuroActive, PrimeSelf; add products only where form is visible — **L**
 8. Store login-gated prices as no price, with a visible-without-login flag (The Clinic) — **S**
 
@@ -330,6 +330,7 @@ Afrikaans and isiZulu are later, not a first-release goal.
 
 ## Changelog
 
+- 2026-08-30: Comparison table (F-9) and COA-stated flag UI (F-11) landed on `main` (plan 2026-08-30-004).
 - 2026-08-25: EP-03 phase exception: comparison table (F-9) and COA-stated flag UI (F-11) wait for Phase 2; provider and product pages stay Phase 1.
 - 2026-08-25: Consistency pass. F-8 card stamp waits for Phase 2; index still lists the stored grade in Phase 1 (F-2). F-20 stays in EP-08 and is not started until Phase 5. Coverage table now includes phase. ROADMAP is linked. What/Why/How kept free of file paths.
 - 2026-08-25: First epics. Nine epics from the PRD. Foundation first. Coverage table maps F-1 to F-23 each to one primary epic. Catalog is planned, not claimed as shipped.
