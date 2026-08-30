@@ -35,4 +35,45 @@ module ApplicationHelper
     country = provider.payload&.dig("country").to_s.strip
     country.present? && !country.casecmp?("ZA")
   end
+
+  def needs_review?(date)
+    return false if date.blank?
+
+    date.to_date < Date.current - 90
+  end
+
+  def checked_stamp(date, id:)
+    return if date.blank?
+
+    checked = content_tag(:p, t("compounds.checked", date: date.to_date.iso8601), id: id, class: "mt-1 text-sm text-stone-600")
+    return checked unless needs_review?(date)
+
+    review_id = id.to_s.sub("-checked", "-needs-review")
+    safe_join([
+      checked,
+      content_tag(:p, t("compounds.needs_review"), id: review_id, class: "mt-1 text-sm text-stone-600")
+    ])
+  end
+
+  def browse_chip_path(key, value)
+    next_params = request.query_parameters.slice("q", "route", "form", "classification", "provider_kind")
+    if next_params[key] == value
+      next_params.delete(key)
+    else
+      next_params[key] = value
+    end
+    compounds_path(next_params)
+  end
+
+  def browse_chip_current?(key, value)
+    params[key].to_s == value
+  end
+
+  def browse_filters_present?
+    params[:route].present? || params[:form].present? || params[:classification].present? || params[:provider_kind].present?
+  end
+
+  def missing_alias_report_url(query)
+    "https://github.com/davidteren/peptides_research_south_africa/issues/new?title=#{ERB::Util.url_encode("Missing alias: #{query}")}"
+  end
 end

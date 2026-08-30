@@ -4,8 +4,17 @@
 
 <h1 class="text-3xl font-semibold"><%= t("compounds.title") %></h1>
 
-<% if @compounds.empty? %>
+<%= render "browse_controls" %>
+
+<% if @compounds.empty? && params[:q].blank? && !browse_filters_present? %>
   <p id="compound-index-empty" class="mt-6 text-stone-600"><%= t("compounds.empty") %></p>
+<% elsif @compounds.empty? && params[:q].present? %>
+  <p id="search-no-match" class="mt-6 text-stone-600"><%= t("compounds.search_no_match") %></p>
+  <p class="mt-2 text-sm">
+    <%= link_to t("compounds.search_report_alias"), missing_alias_report_url(params[:q]), id: "search-report-alias", class: "underline" %>
+  </p>
+<% elsif @compounds.empty? %>
+  <p id="filter-no-match" class="mt-6 text-stone-600"><%= t("compounds.filter_no_match") %></p>
 <% else %>
   <ul id="compound-index" class="mt-6 divide-y divide-stone-200">
     <% @compounds.each do |compound| %>
@@ -16,6 +25,7 @@
           · <%= t("compounds.routes") %>: <%= catalog_routes(compound) %>
           · <%= t("compounds.evidence") %>: <%= evidence_grade_label(compound.evidence_grade) %>
         </p>
+        <%= checked_stamp(compound.last_reviewed_at, id: "compound-index-checked-#{compound.slug}") %>
       </li>
     <% end %>
   </ul>

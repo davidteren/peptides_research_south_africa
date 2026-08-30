@@ -20,7 +20,40 @@ class CatalogBrowseTest < ActionDispatch::IntegrationTest
     assert_select "#compound-index"
     assert_select "#compound-card-bpc-157"
     assert_select "#compound-link-bpc-157", text: "BPC-157"
+    assert_select "#compound-search"
+    assert_select "#compound-search-q"
+    assert_select "#compound-search-submit"
+    assert_select "#filter-route-injectable"
     assert_match "Preclinical", response.body
+    assert_no_match(/cheapest/i, response.body)
+  end
+
+  test "alias search keeps BPC-157 on the index" do
+    get compounds_path, params: { q: "bpc 157" }
+    assert_response :success
+    assert_select "#compound-card-bpc-157"
+    assert_select "#search-no-match", count: 0
+  end
+
+  test "unknown search shows no match and a report link" do
+    get compounds_path, params: { q: "xyzzy-not-a-peptide" }
+    assert_response :success
+    assert_select "#search-no-match"
+    assert_select "#search-report-alias"
+    assert_select "[data-testid=compound-card]", count: 0
+  end
+
+  test "injectable filter does not 500" do
+    get compounds_path, params: { route: "injectable" }
+    assert_response :success
+    assert_select "#filter-route-injectable[aria-current=true]"
+  end
+
+  test "filter with no rows says the filters matched nothing" do
+    get compounds_path, params: { classification: "ghrh" }
+    assert_response :success
+    assert_select "#filter-no-match"
+    assert_select "#compound-index-empty", count: 0
   end
 
   test "compound detail shows summary and disclaimer above the fold" do
@@ -28,7 +61,24 @@ class CatalogBrowseTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "#catalog-disclaimer"
     assert_select "#compound-summary"
+    assert_select "#compound-checked"
+    assert_select "#compound-inn", count: 0
     assert_select "#compound-protocols, #compound-protocols-empty"
+  end
+
+  test "noopept shows the INN label" do
+    get compound_path("noopept")
+    assert_response :success
+    assert_select "#compound-inn", text: /omberacetam/
+  end
+
+  test "stale review date shows needs review" do
+    compound = Compound.find_by!(slug: "bpc-157")
+    compound.update!(last_reviewed_at: Date.current - 91)
+
+    get compound_path("bpc-157")
+    assert_response :success
+    assert_select "#compound-needs-review"
   end
 
   test "bpc-157 shows WADA S0 SAHPRA warning and legal disclaimer" do
@@ -131,6 +181,7 @@ class CatalogBrowseTest < ActionDispatch::IntegrationTest
     get provider_path("reschem")
     assert_response :success
     assert_select "#provider-research-notice"
+    assert_select "#provider-checked"
     assert_select "#catalog-disclaimer"
   end
 

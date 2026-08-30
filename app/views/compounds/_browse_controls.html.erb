@@ -1,0 +1,84 @@
+<%= form_with url: compounds_path, method: :get, id: "compound-search", class: "mt-6 space-y-4" do %>
+  <div>
+    <label for="compound-search-q" class="block text-sm font-medium"><%= t("compounds.search_label") %></label>
+    <div class="mt-2 flex flex-wrap gap-2">
+      <%= text_field_tag :q, params[:q], id: "compound-search-q", class: "min-w-[12rem] flex-1 border border-stone-300 bg-white px-3 py-2 text-sm" %>
+      <% %i[route form classification provider_kind].each do |key| %>
+        <%= hidden_field_tag key, params[key] if params[key].present? %>
+      <% end %>
+      <%= submit_tag t("compounds.search_submit"), id: "compound-search-submit", name: nil, class: "border border-stone-300 bg-white px-3 py-2 text-sm" %>
+    </div>
+  </div>
+
+  <fieldset id="filter-route" class="border border-stone-200 p-3">
+    <legend class="px-1 text-sm font-medium"><%= t("compounds.filter_route") %></legend>
+    <div class="mt-2 flex flex-wrap gap-2 text-sm">
+      <% [
+        [ "injectable", t("compounds.chip_injectable") ],
+        [ "nasal", t("compounds.chip_nasal") ],
+        [ "oral", t("compounds.chip_oral") ],
+        [ "topical", t("compounds.chip_topical") ]
+      ].each do |value, label| %>
+        <%= link_to label, browse_chip_path("route", value),
+              id: "filter-route-#{value}",
+              class: "border border-stone-300 px-2 py-1 #{'bg-stone-100 font-medium' if browse_chip_current?(:route, value)}",
+              aria: { current: (browse_chip_current?(:route, value) ? "true" : nil) } %>
+      <% end %>
+    </div>
+  </fieldset>
+
+  <fieldset id="filter-form" class="border border-stone-200 p-3">
+    <legend class="px-1 text-sm font-medium"><%= t("compounds.filter_form") %></legend>
+    <div class="mt-2 flex flex-wrap gap-2 text-sm">
+      <% [
+        [ "lyophilized_vial", t("compounds.chip_lyophilized_vial") ],
+        [ "prefilled_pen", t("compounds.chip_prefilled_pen") ],
+        [ "cartridge", t("compounds.chip_cartridge") ],
+        [ "nasal_spray", t("compounds.chip_nasal_spray") ],
+        [ "capsule", t("compounds.chip_capsule") ],
+        [ "tablet", t("compounds.chip_tablet") ],
+        [ "powder", t("compounds.chip_powder") ],
+        [ "topical", t("compounds.chip_topical_form") ],
+        [ "blend", t("compounds.chip_blend") ]
+      ].each do |value, label| %>
+        <%= link_to label, browse_chip_path("form", value),
+              id: "filter-form-#{value}",
+              class: "border border-stone-300 px-2 py-1 #{'bg-stone-100 font-medium' if browse_chip_current?(:form, value)}",
+              aria: { current: (browse_chip_current?(:form, value) ? "true" : nil) } %>
+      <% end %>
+    </div>
+  </fieldset>
+
+  <fieldset id="filter-classification" class="border border-stone-200 p-3">
+    <legend class="px-1 text-sm font-medium"><%= t("compounds.filter_classification") %></legend>
+    <div class="mt-2 flex flex-wrap gap-2 text-sm">
+      <% [
+        [ "healing", t("compounds.chip_healing") ],
+        [ "ghrh", t("compounds.chip_ghrh") ],
+        [ "secretagogue", t("compounds.chip_secretagogue") ],
+        [ "glp1_metabolic", t("compounds.chip_glp1_metabolic") ],
+        [ "melanocortin", t("compounds.chip_melanocortin") ],
+        [ "nootropic", t("compounds.chip_nootropic") ],
+        [ "copper", t("compounds.chip_copper") ],
+        [ "other", t("compounds.chip_other_class") ]
+      ].each do |value, label| %>
+        <%= link_to label, browse_chip_path("classification", value),
+              id: "filter-classification-#{value}",
+              class: "border border-stone-300 px-2 py-1 #{'bg-stone-100 font-medium' if browse_chip_current?(:classification, value)}",
+              aria: { current: (browse_chip_current?(:classification, value) ? "true" : nil) } %>
+      <% end %>
+    </div>
+  </fieldset>
+
+  <fieldset id="filter-provider-kind" aria-label="<%= t("compounds.filter_provider_kind") %>" class="border border-stone-200 p-3">
+    <legend class="px-1 text-sm font-medium"><%= t("compounds.filter_provider_kind") %></legend>
+    <div class="mt-2 flex flex-wrap gap-2 text-sm">
+      <% %w[compounding_pharmacy clinic nootropic_retailer research_storefront international unknown].each do |value| %>
+        <%= link_to provider_kind_label(value), browse_chip_path("provider_kind", value),
+              id: "filter-provider-kind-#{value}",
+              class: "border border-stone-300 px-2 py-1 #{'bg-stone-100 font-medium' if browse_chip_current?(:provider_kind, value)}",
+              aria: { current: (browse_chip_current?(:provider_kind, value) ? "true" : nil) } %>
+      <% end %>
+    </div>
+  </fieldset>
+<% end %>

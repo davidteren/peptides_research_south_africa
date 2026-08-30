@@ -17,6 +17,7 @@
             · <%= provider.city %>
           <% end %>
         </p>
+        <%= checked_stamp(provider.last_reviewed_at, id: "provider-index-checked-#{provider.slug}") %>
       </li>
     <% end %>
   </ul>

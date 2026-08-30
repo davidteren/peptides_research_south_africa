@@ -27,4 +27,16 @@ class ApplicationHelperTest < ActionView::TestCase
     provider = Struct.new(:payload).new({})
     refute non_sa_shipper?(provider)
   end
+
+  test "needs_review is true when the date is 91 days ago" do
+    assert needs_review?(Date.current - 91)
+  end
+
+  test "needs_review is false for today" do
+    refute needs_review?(Date.current)
+  end
+
+  test "needs_review is false when date is blank" do
+    refute needs_review?(nil)
+  end
 end

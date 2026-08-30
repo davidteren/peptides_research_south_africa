@@ -8,6 +8,11 @@
     <%= t("compounds.classification") %>: <%= @compound.classification %>
     · <%= t("compounds.evidence") %>: <%= evidence_grade_label(@compound.evidence_grade) %>
   </p>
+  <% inn = @compound.payload&.dig("inn") %>
+  <% if inn.present? %>
+    <p id="compound-inn" class="mt-2 text-sm text-stone-700"><%= t("compounds.inn") %>: <%= inn %></p>
+  <% end %>
+  <%= checked_stamp(@compound.last_reviewed_at, id: "compound-checked") %>
 
   <%= render "legal_flags" %>
 
@@ -73,6 +78,7 @@
             <% if product.price_zar.present? && product.price_visible_without_login? %>
               · R<%= product.price_zar %>
             <% end %>
+            <%= checked_stamp(product.last_reviewed_at, id: "listing-checked-#{product.slug}") %>
             <% if non_sa_shipper?(product.provider) %>
               <p id="listing-import-note-<%= product.slug %>" class="mt-1 text-sm text-stone-600">
                 <%= t("compounds.import_rule") %>

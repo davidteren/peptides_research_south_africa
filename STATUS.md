@@ -3,8 +3,8 @@
 ## Last session handoff
 
 **What this is:** A public South Africa research catalog for peptides, nootropics, and local providers.
-**What we finished:** Compound pages now show SAHPRA and WADA flags, SAIDS, and the import rule for non-SA shippers.
-**What you do next:** Build EP-05 search and last-verified stamps from plan 002. `#6`
+**What we finished:** Compound browse now has alias search, filter chips, and Checked / needs-review stamps.
+**What you do next:** Build the vendor-only summary gate and evidence stamp from plan 003. `#47`
 
 _Last updated: 2026-08-30. Read this, then [AGENTS.md](AGENTS.md) and the `docs/` suite._
 
@@ -21,7 +21,7 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. Public nam
 | **EP-02 Compound catalog** | Six cited compounds with index and detail pages. Card stamp `#49` and `#47` share plan 2026-08-30-003. |
 | **EP-03 Providers and products** | Eight providers, 38 live listings, provider pages. Comparison `#37` and COA `#39` share plan 2026-08-30-004. |
 | **EP-04 Legal and athlete flags** | Flags on compound pages (plan 001). Stories `#9` `#10` `#11` `#13` `#15` `#18` `#21`. |
-| **EP-05 Search, browse, last-verified** | Plan ready: [2026-08-30-002](docs/plans/2026-08-30-002-feat-search-browse-verified-plan.md). Issues still open. |
+| **EP-05 Search, browse, last-verified** | Search, chips, and Checked stamps are on `main` (plan 002). |
 | **EP-07 Agent research workflow** | Plan ready: [2026-08-30-005](docs/plans/2026-08-30-005-feat-agent-research-workflow-plan.md). |
 | **EP-06 PWA and device-local saves** | Plan ready: [2026-08-30-006](docs/plans/2026-08-30-006-feat-pwa-and-device-saves-plan.md). |
 | **EP-08 Stacks** | Phase 4 plan: [2026-08-30-007](docs/plans/2026-08-30-007-feat-stack-checker-and-named-stacks-plan.md). F-20 helper: [2026-08-30-008](docs/plans/2026-08-30-008-feat-research-arithmetic-helper-plan.md). |
@@ -50,7 +50,7 @@ Needs Ruby 3.4.9 (rbenv) and local PostgreSQL. `DB_HOST` is only for the contrib
 
 ## What you do next
 
-1. Browse a compound page and read the SAHPRA and WADA flags.
-2. Build EP-05 from `docs/plans/2026-08-30-002-feat-search-browse-verified-plan.md` (`#6`). `#47` stays open until plan 003 is built.
+1. Search `BPC157` on the compounds page and read a Checked date.
+2. Build the vendor-only gate and evidence stamp from plan 003 (`#47` `#49`).
 
 Tracker: this file plus GitHub issues and milestones. Do not invent private IDs.
