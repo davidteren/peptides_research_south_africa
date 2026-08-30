@@ -1,0 +1,37 @@
+.gitignore
+  s_240773ee81a9c0::t_02b95007e8afad 39-44
+STATUS.md
+  s_240773ee81a9c0::t_2177299a07ecc1 6-7,23,53-54
+app/helpers/application_helper.rb
+  s_240773ee81a9c0::t_3f0c37cb18e102 13-37
+app/views/compounds/_legal_flags.html.erb
+  s_240773ee81a9c0::t_f27f66198d7244 1-64
+app/views/compounds/show.html.erb
+  s_240773ee81a9c0::t_4372264dd6111b 12-13,76-80
+config/locales/en.yml
+  s_240773ee81a9c0::t_cbfcf73f89d5b8 29-48
+e2e/compound-legal-flags.spec.ts
+  s_240773ee81a9c0::t_81a94b35808dc2 1-11
+package-lock.json
+  s_240773ee81a9c0::t_aefbe636ebe595 1-76
+test/helpers/application_helper_test.rb
+  s_240773ee81a9c0::t_d341abda060047 1-30
+test/integration/catalog_browse_test.rb
+  s_240773ee81a9c0::t_35cf2a24cae13d 34-122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "b3fc178a20f4d004b229641216c7f0a2eca79de1",
+  "prompts": {},
+  "sessions": {
+    "s_240773ee81a9c0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b30a1cc4-bb8a-4143-acae-92deba078818",
+        "model": "claude-opus-5"
+      },
+      "human_author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
