@@ -1,0 +1,32 @@
+STATUS.md
+  h_e8a5bb9272fa34 6-7,20-21,53-54
+app/helpers/application_helper.rb
+  h_e8a5bb9272fa34 79-87
+app/views/compounds/index.html.erb
+  h_e8a5bb9272fa34 23-31
+config/locales/en.yml
+  h_e8a5bb9272fa34 22
+data/README.md
+  h_e8a5bb9272fa34 43,50-51,65
+e2e/compound-stamp.spec.ts
+  h_e8a5bb9272fa34 1-7
+lib/catalog/validator.rb
+  h_e8a5bb9272fa34 14-15,85-86,92-119
+test/helpers/application_helper_test.rb
+  h_e8a5bb9272fa34 42-51
+test/integration/catalog_browse_test.rb
+  h_e8a5bb9272fa34 28-30
+test/models/catalog_validator_test.rb
+  h_e8a5bb9272fa34 42-158,191-232,234
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "8ddedb974b35ced4ec745aca805070aa3ab560dc",
+  "prompts": {},
+  "humans": {
+    "h_e8a5bb9272fa34": {
+      "author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
