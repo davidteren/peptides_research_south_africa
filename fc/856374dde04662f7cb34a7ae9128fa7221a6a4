@@ -1,0 +1,46 @@
+README.md
+  h_e8a5bb9272fa34 20
+STATUS.md
+  h_e8a5bb9272fa34 6-7,15,26,54-55
+app/controllers/saved_compounds_controller.rb
+  h_e8a5bb9272fa34 1-4
+app/javascript/application.js
+  h_e8a5bb9272fa34 4-7
+app/javascript/controllers/offline_banner_controller.js
+  h_e8a5bb9272fa34 1-19
+app/javascript/controllers/saved_compounds_controller.js
+  h_e8a5bb9272fa34 1-69
+app/views/compounds/show.html.erb
+  h_e8a5bb9272fa34 17-29
+app/views/layouts/application.html.erb
+  h_e8a5bb9272fa34 17-18,25-27,35
+app/views/pwa/manifest.json.erb
+  h_e8a5bb9272fa34 2-3,20-22
+app/views/pwa/service-worker.js
+  h_e8a5bb9272fa34 1-61
+app/views/saved_compounds/index.html.erb
+  h_e8a5bb9272fa34 1-11
+config/locales/en.yml
+  h_e8a5bb9272fa34 4-5,10-17
+config/routes.rb
+  h_e8a5bb9272fa34 3-5
+docs/EPICS.md
+  h_e8a5bb9272fa34 166-171,333
+e2e/pwa-saves.spec.ts
+  h_e8a5bb9272fa34 1-41
+test/integration/catalog_browse_test.rb
+  h_e8a5bb9272fa34 15-17
+test/integration/pwa_saves_test.rb
+  h_e8a5bb9272fa34 1-43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "fc856374dde04662f7cb34a7ae9128fa7221a6a4",
+  "prompts": {},
+  "humans": {
+    "h_e8a5bb9272fa34": {
+      "author": "davidteren <drteren@gmail.com>"
+    }
+  }
+}
