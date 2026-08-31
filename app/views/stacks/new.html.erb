@@ -1,0 +1,18 @@
+<% content_for :title, t("stacks.picker_title") %>
+
+<%= render "disclaimer" %>
+
+<h1 class="text-3xl font-semibold"><%= t("stacks.picker_title") %></h1>
+<p class="mt-2 max-w-2xl text-stone-700"><%= t("stacks.picker_lead") %></p>
+
+<%= form_with url: stack_check_path, method: :get, id: "stack-picker", class: "mt-6 space-y-3" do %>
+  <ul class="divide-y divide-stone-200">
+    <% @compounds.each do |compound| %>
+      <li class="py-2">
+        <%= check_box_tag "compound_ids[]", compound.slug, false, id: "stack-pick-#{compound.slug}" %>
+        <%= label_tag "stack-pick-#{compound.slug}", compound.name, class: "ml-2" %>
+      </li>
+    <% end %>
+  </ul>
+  <%= submit_tag t("stacks.check_submit"), id: "stack-picker-submit", name: nil, class: "mt-4 border border-stone-300 bg-white px-3 py-2 text-sm" %>
+<% end %>

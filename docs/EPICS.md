@@ -215,11 +215,11 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. No epic ma
 
 **Stories**
 
-1. Build the stack checker from catalog data: class overlap, route clash, known pair notes, WADA rollup — **L**
-2. Repeat the disclaimer; never say "safe to combine"; do not ingest other medicines — **S**
-3. Publish named stacks as records of a convention, with nickname search (example: Wolverine, CJC-1295 + Ipamorelin) — **M**
-4. Block publish when a named stack fails the checker; roll up legal and WADA flags from members — **S**
-5. Show pair notes only inside the checker, each with a source (not a general drug-interaction engine) — **M**
+1. Build the stack checker from catalog data: class overlap, route clash, known pair notes, WADA rollup — **L**. On `main` (plan 2026-08-30-007).
+2. Repeat the disclaimer; never say "safe to combine"; do not ingest other medicines — **S**. On `main` (plan 2026-08-30-007).
+3. Publish named stacks as records of a convention, with nickname search (example: Wolverine, CJC-1295 + Ipamorelin) — **M**. Empty index on `main` until a cited convention file exists (plan 2026-08-30-007).
+4. Block publish when a named stack fails the checker; roll up legal and WADA flags from members — **S**. On `main` (plan 2026-08-30-007).
+5. Show pair notes only inside the checker, each with a source (not a general drug-interaction engine) — **M**. On `main` (plan 2026-08-30-007).
 6. Add a labelled arithmetic helper: vial milligrams, diluent millilitres, and syringe units in; amount per unit out — **M**. Not started until Phase 5.
 7. Do not pre-fill the helper from reported protocols; no body weight, no indication, no injection-site diagram, no vendor water link — **S**. Not started until Phase 5.
 
@@ -330,6 +330,7 @@ Afrikaans and isiZulu are later, not a first-release goal.
 
 ## Changelog
 
+- 2026-08-31: EP-08 Phase 4 stack checker and empty named-stack index landed on `main` (plan 2026-08-30-007). Arithmetic helper still waits for Phase 5.
 - 2026-08-31: EP-06 PWA and device-local saves landed on `main` (plan 2026-08-30-006).
 - 2026-08-30: EP-07 operator loop landed: catalog readme, bans, live merge-check pointer, and grade-review checklist (plan 2026-08-30-005).
 - 2026-08-30: Comparison table (F-9) and COA-stated flag UI (F-11) landed on `main` (plan 2026-08-30-004).

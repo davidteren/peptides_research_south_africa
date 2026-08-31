@@ -1,0 +1,44 @@
+<%# locals: result %>
+<% if result.too_few %>
+  <p id="stack-checker-too-few" class="mt-6 text-stone-600"><%= t("stacks.too_few") %></p>
+<% else %>
+  <section id="stack-checker" class="mt-8 space-y-6">
+    <div id="stack-wada-rollup">
+      <h2 class="font-semibold"><%= t("stacks.wada_heading") %></h2>
+      <% case result.wada&.status %>
+      <% when "prohibited" %>
+        <p id="stack-wada-prohibited" class="mt-2"><%= t("stacks.wada_prohibited") %></p>
+      <% when "unknown" %>
+        <p id="stack-wada-unknown" class="mt-2"><%= t("stacks.wada_unknown") %></p>
+      <% else %>
+        <p id="stack-wada-not-prohibited" class="mt-2"><%= t("stacks.wada_not_prohibited") %></p>
+      <% end %>
+      <p id="stack-saids" class="mt-2 text-sm text-stone-600"><%= t("compounds.saids") %></p>
+      <p class="mt-2 text-sm text-stone-600"><%= t("compounds.legal_disclaimer") %></p>
+    </div>
+
+    <div id="stack-checker-notes">
+      <h2 class="font-semibold"><%= t("stacks.notes_heading") %></h2>
+      <% result.class_overlap.each do |classification| %>
+        <p id="stack-class-overlap-<%= classification %>" class="mt-2">
+          <%= t("stacks.class_overlap", class_name: classification) %>
+        </p>
+      <% end %>
+      <% if result.route_clash %>
+        <p id="stack-route-note" class="mt-2"><%= t("stacks.route_note") %></p>
+      <% end %>
+      <% if result.pair_notes.any? %>
+        <ul id="stack-pair-notes" class="mt-2 list-disc pl-5">
+          <% result.pair_notes.each do |note| %>
+            <li id="stack-pair-note-<%= note.other_id %>">
+              <%= note.note %>
+              <% unless note.source_on_file %>
+                <span class="block text-sm text-stone-600"><%= t("stacks.source_missing") %></span>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </section>
+<% end %>

@@ -4,6 +4,7 @@ module Catalog
   RECORD_DIRS = {
     "compound" => "compounds",
     "provider" => "providers",
-    "product" => "products"
+    "product" => "products",
+    "stack" => "stacks"
   }.freeze
 end

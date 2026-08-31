@@ -6,7 +6,8 @@ module Catalog
     TYPE_KEYS = {
       "compound" => %w[name aliases class categories summary research_uses reported_protocols routes_studied forms evidence_grade sahpra wada stack_pair_notes],
       "provider" => %w[name kind website country currency prescription_required listing_posture status],
-      "product" => %w[compound_id provider_id product_url title_on_page form route strength price_zar price_visible_without_login coa_stated]
+      "product" => %w[compound_id provider_id product_url title_on_page form route strength price_zar price_visible_without_login coa_stated],
+      "stack" => %w[name compound_ids origin]
     }.freeze
     DATE = /\A\d{4}-\d{2}-\d{2}\z/
     KEBAB = /\A[a-z0-9]+(?:-[a-z0-9]+)*\z/
@@ -26,7 +27,7 @@ module Catalog
 
     def check
       errors = []
-      ids = { "compound" => [], "provider" => [], "product" => [] }
+      ids = TYPE_KEYS.keys.index_with { [] }
 
       TYPE_KEYS.each_key do |type|
         dir = @root.join(Catalog::RECORD_DIRS[type])
@@ -38,6 +39,7 @@ module Catalog
       end
 
       errors.concat(check_product_refs(ids))
+      errors.concat(check_stack_members(ids))
       Result.new(ok: errors.empty?, errors: errors)
     end
 
@@ -130,6 +132,27 @@ module Catalog
         end
         unless ids["provider"].include?(data["provider_id"])
           errors << "#{relative}: provider_id #{data["provider_id"].inspect} has no provider file"
+        end
+      end
+      errors
+    end
+
+    def check_stack_members(ids)
+      errors = []
+      dir = @root.join("stacks")
+      return errors unless dir.directory?
+
+      dir.glob("*.json").sort.each do |path|
+        relative = path.relative_path_from(@root).to_s
+        data = JSON.parse(path.read)
+        members = Array(data["compound_ids"])
+        if members.size < 2
+          errors << "#{relative}: compound_ids needs at least two members"
+        end
+        members.each do |compound_id|
+          next if ids["compound"].include?(compound_id)
+
+          errors << "#{relative}: compound_id #{compound_id.inspect} has no compound file"
         end
       end
       errors

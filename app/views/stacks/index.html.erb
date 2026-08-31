@@ -1,0 +1,21 @@
+<% content_for :title, t("stacks.title") %>
+
+<%= render "disclaimer" %>
+
+<h1 class="text-3xl font-semibold"><%= t("stacks.title") %></h1>
+<p class="mt-4">
+  <%= link_to t("stacks.check_link"), new_stack_path, id: "stack-index-check", class: "underline" %>
+</p>
+
+<% if @stacks.empty? %>
+  <p id="stack-index-empty" class="mt-6 text-stone-600"><%= t("stacks.empty") %></p>
+<% else %>
+  <ul id="stack-index" class="mt-6 divide-y divide-stone-200">
+    <% @stacks.each do |stack| %>
+      <li id="stack-card-<%= stack.slug %>" data-testid="stack-card" class="py-4">
+        <%= link_to stack.name, stack_path(stack), id: "stack-link-#{stack.slug}", class: "text-lg font-medium underline" %>
+        <p class="mt-1 text-sm text-stone-600"><%= t("stacks.convention") %></p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

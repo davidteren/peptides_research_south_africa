@@ -156,6 +156,42 @@ class CatalogValidatorTest < ActiveSupport::TestCase
     end
   end
 
+  test "rejects a stack whose compound is missing" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(root, sources: [ literature_source ])
+      write_stack(root, compound_ids: [ "ok-compound", "missing-compound" ])
+
+      result = Catalog::Validator.check(root: root)
+      refute result.ok
+      assert_includes result.errors.join, "missing-compound"
+    end
+  end
+
+  test "rejects a stack with one member" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(root, sources: [ literature_source ])
+      write_stack(root, compound_ids: [ "ok-compound" ])
+
+      result = Catalog::Validator.check(root: root)
+      refute result.ok
+      assert_includes result.errors.join, "at least two members"
+    end
+  end
+
+  test "accepts a valid stack even when WADA would prohibit the pair" do
+    Dir.mktmpdir do |dir|
+      root = Pathname(dir)
+      write_compound(root, sources: [ literature_source ])
+      write_second_compound(root)
+      write_stack(root, compound_ids: [ "ok-compound", "other-compound" ])
+
+      result = Catalog::Validator.check(root: root)
+      assert result.ok, result.errors.join("\n")
+    end
+  end
+
   test "rejects a product whose compound is missing" do
     Dir.mktmpdir do |dir|
       root = Pathname(dir)
@@ -226,6 +262,48 @@ class CatalogValidatorTest < ActiveSupport::TestCase
         last_reviewed_at: "2026-08-26",
         reviewer: "test",
         sources: sources,
+        confidence: "unverified"
+      }.to_json)
+    end
+
+    def write_second_compound(root)
+      compounds = root.join("compounds")
+      compounds.mkpath
+      compounds.join("other-compound.json").write({
+        id: "other-compound",
+        schema_version: "1.0.0",
+        name: "Other",
+        aliases: [],
+        class: "other",
+        categories: [ "other" ],
+        summary: "x",
+        research_uses: [],
+        reported_protocols: [],
+        routes_studied: [],
+        forms: [],
+        evidence_grade: "anecdotal",
+        sahpra: {},
+        wada: { "prohibited" => true },
+        stack_pair_notes: [],
+        last_reviewed_at: "2026-08-26",
+        reviewer: "test",
+        sources: [ literature_source ],
+        confidence: "unverified"
+      }.to_json)
+    end
+
+    def write_stack(root, compound_ids:)
+      stacks = root.join("stacks")
+      stacks.mkpath
+      stacks.join("example-stack.json").write({
+        id: "example-stack",
+        schema_version: "1.0.0",
+        name: "Example pair",
+        compound_ids: compound_ids,
+        origin: "commonly_reported",
+        last_reviewed_at: "2026-08-26",
+        reviewer: "test",
+        sources: [ vendor_source ],
         confidence: "unverified"
       }.to_json)
     end

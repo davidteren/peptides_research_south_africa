@@ -1,0 +1,16 @@
+<% content_for :title, t("stacks.result_title") %>
+
+<%= render "disclaimer" %>
+
+<article>
+  <h1 class="text-3xl font-semibold"><%= t("stacks.result_title") %></h1>
+  <% if @compounds.any? %>
+    <ul id="stack-check-members" class="mt-4 list-disc pl-5">
+      <% @compounds.each do |compound| %>
+        <li><%= link_to compound.name, compound_path(compound), class: "underline" %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= render "checker_notes", result: @result %>
+</article>

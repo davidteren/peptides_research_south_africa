@@ -13,6 +13,7 @@ class CatalogBrowseTest < ActionDispatch::IntegrationTest
     assert_select "#site-nav-compounds"
     assert_select "#site-nav-providers"
     assert_select "#site-nav-saved"
+    assert_select "#site-nav-stacks"
     assert_select "#pwa-manifest"
     assert_select "#offline-stale-banner[hidden]"
   end
@@ -249,5 +250,40 @@ class CatalogBrowseTest < ActionDispatch::IntegrationTest
     assert_select "#provider-listing-#{product.slug}"
     assert_select "#listing-form-#{product.slug}"
     assert_select "[id^=buy-]", count: 0
+  end
+
+  test "stacks index is empty and has a checker link" do
+    get stacks_path
+    assert_response :success
+    assert_select "#catalog-disclaimer"
+    assert_select "#stack-index-empty"
+    assert_select "#stack-index-check"
+    assert_no_match(/safe to combine/i, response.body)
+  end
+
+  test "stack checker shows pair notes for BPC-157 and TB-500" do
+    get stack_check_path, params: { compound_ids: %w[bpc-157 tb-500] }
+    assert_response :success
+    assert_select "#catalog-disclaimer"
+    assert_select "#stack-checker"
+    assert_select "#stack-checker-notes"
+    assert_select "#stack-pair-note-tb-500"
+    assert_select "#stack-wada-prohibited"
+    assert_select "#stack-class-overlap-healing"
+    assert_no_match(/safe to combine/i, response.body)
+    assert_select "[id^=buy-]", count: 0
+  end
+
+  test "stack checker with one id shows too few" do
+    get stack_check_path, params: { compound_ids: [ "bpc-157" ] }
+    assert_response :success
+    assert_select "#stack-checker-too-few"
+    assert_select "#stack-checker-notes", count: 0
+  end
+
+  test "compound show does not grow a pair-notes section" do
+    get compound_path("bpc-157")
+    assert_response :success
+    assert_select "#compound-pair-notes", count: 0
   end
 end

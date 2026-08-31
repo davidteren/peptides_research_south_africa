@@ -1,0 +1,25 @@
+<% content_for :title, @stack.name %>
+
+<%= render "disclaimer" %>
+
+<article id="stack-detail">
+  <h1 id="stack-name" class="text-3xl font-semibold"><%= @stack.name %></h1>
+  <p class="mt-2 text-sm text-stone-600"><%= t("stacks.convention") %></p>
+  <% aliases = Array(@stack.payload&.dig("aliases")) %>
+  <% if aliases.any? %>
+    <p id="stack-aliases" class="mt-2 text-stone-700"><%= t("stacks.aliases") %>: <%= aliases.join(", ") %></p>
+  <% end %>
+
+  <section class="mt-6">
+    <h2 class="font-semibold"><%= t("stacks.members") %></h2>
+    <ul id="stack-members" class="mt-2 list-disc pl-5">
+      <% @compounds.each do |compound| %>
+        <li id="stack-member-<%= compound.slug %>">
+          <%= link_to compound.name, compound_path(compound), class: "underline" %>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+
+  <%= render "checker_notes", result: @result %>
+</article>

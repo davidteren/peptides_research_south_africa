@@ -17,6 +17,7 @@ module Catalog
       import_compounds
       import_providers
       import_products
+      import_stacks
     end
 
     private
@@ -92,6 +93,25 @@ module Catalog
         record.save!
       end
       Product.where.not(slug: seen).find_each(&:destroy!)
+    end
+
+    def import_stacks
+      seen = []
+      each_record("stacks") do |data|
+        next if data["origin"] == "user_saved"
+
+        seen << data["id"]
+        record = Stack.find_or_initialize_by(slug: data["id"])
+        record.assign_attributes(
+          name: data["name"],
+          origin: data["origin"],
+          last_reviewed_at: data["last_reviewed_at"],
+          confidence: data["confidence"],
+          payload: data
+        )
+        record.save!
+      end
+      Stack.where.not(slug: seen).find_each(&:destroy!)
     end
 
     def each_record(dir)

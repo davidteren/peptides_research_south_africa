@@ -15,7 +15,7 @@ A new agent should be able to add or refresh a record from this file. The merge 
 | `compounds/` | One file per compound (`bpc-157.json`) |
 | `providers/` | One file per provider (`reschem.json`) |
 | `products/` | One file per listing (`reschem-bpc-157-pen.json`) |
-| `stacks/` | Empty until the stack checker ships. Schema exists now. |
+| `stacks/` | Named convention records. The checker still works with an empty folder. |
 
 ## How to add a compound
 
@@ -35,6 +35,15 @@ A new agent should be able to add or refresh a record from this file. The merge 
 2. Record only facts on the page: name, URL, city, forms, script step, currency.
 3. Set `kind` from what the site is (research storefront, compounding pharmacy, clinic, oral retailer). Type is a classification, not a recommendation.
 4. Quote marketing. Do not rewrite it as efficacy.
+
+## How to add a named stack
+
+1. Copy `_templates/stack.json`.
+2. Use two or more compound ids that already exist.
+3. Set `origin` to `vendor_named` or `commonly_reported`. Do not publish `user_saved`.
+4. A missing compound id, or fewer than two members, fails `bin/rails catalog:check`.
+5. Class overlap, route notes, and WADA flags still publish. They show as notes, not as a merge failure.
+6. Do not write "safe to combine".
 
 ## How to add a product
 
@@ -90,6 +99,7 @@ The merge check is `bin/rails catalog:check`. Invalid JSON, missing `last_review
 - Rumour records on the public index without a curator note
 - Compound summary sources that are only vendor, encyclopedia, review, or news (need `regulator` or `primary_literature`)
 - A present research use whose sources are only vendor or encyclopedia
+- A named stack with fewer than two members, or a member id that has no compound file
 
 ## First drop (from the scout, 2026-08-25)
 
@@ -101,6 +111,7 @@ Products: only after the matching compound file exists, and only where a live pa
 
 ## Changelog
 
+- 2026-08-31: Stack checker ships. Named stack files still need a cited convention.
 - 2026-08-30: Operator loop: citation rules, bans, live merge check, and grade-review checklist.
 - 2026-08-30: Merge check rejects vendor-only and encyclopedia-only compound summaries.
 - 2026-08-26: Six starter compound files with literature, SAHPRA, and WADA citations.

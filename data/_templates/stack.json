@@ -1,0 +1,23 @@
+{
+  "id": "example-stack",
+  "schema_version": "1.0.0",
+  "name": "Example named pair",
+  "aliases": [],
+  "compound_ids": [
+    "example-compound",
+    "other-compound"
+  ],
+  "origin": "commonly_reported",
+  "reported_use": null,
+  "last_reviewed_at": "2026-08-31",
+  "reviewer": "template",
+  "sources": [
+    {
+      "url": "https://example.co.za/product",
+      "title": "Replace with a live page that names the pair",
+      "accessed_at": "2026-08-31",
+      "kind": "vendor"
+    }
+  ],
+  "confidence": "unverified"
+}
