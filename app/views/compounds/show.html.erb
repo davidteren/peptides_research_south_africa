@@ -14,6 +14,19 @@
   <% end %>
   <%= checked_stamp(@compound.last_reviewed_at, id: "compound-checked") %>
 
+  <button
+    type="button"
+    id="compound-save-<%= @compound.slug %>"
+    class="mt-4 border border-stone-300 bg-white px-3 py-2 text-sm"
+    data-controller="saved-compounds"
+    data-saved-compounds-slug-value="<%= @compound.slug %>"
+    data-saved-compounds-save-label-value="<%= t("saved.save") %>"
+    data-saved-compounds-unsave-label-value="<%= t("saved.unsave") %>"
+    data-action="click->saved-compounds#toggle"
+    aria-pressed="false">
+    <%= t("saved.save") %>
+  </button>
+
   <%= render "legal_flags" %>
 
   <section class="mt-6">

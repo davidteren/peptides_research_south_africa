@@ -1,0 +1,11 @@
+<% content_for :title, t("saved.title") %>
+
+<%= render "disclaimer" %>
+
+<section id="saved-page" data-controller="saved-compounds">
+  <h1 class="text-3xl font-semibold"><%= t("saved.title") %></h1>
+  <p id="saved-index-empty" class="mt-6 text-stone-600" data-saved-compounds-target="empty">
+    <%= t("saved.empty") %>
+  </p>
+  <ul id="saved-index" class="mt-6 divide-y divide-stone-200" data-saved-compounds-target="list" hidden></ul>
+</section>

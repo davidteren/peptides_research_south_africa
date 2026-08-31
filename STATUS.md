@@ -3,8 +3,8 @@
 ## Last session handoff
 
 **What this is:** A public South Africa research catalog for peptides, nootropics, and local providers.
-**What we finished:** The catalog readme is the operator loop. A human can block a grade raise.
-**What you do next:** Make the catalog installable as a home-screen app from plan 006. `#65`
+**What we finished:** The catalog is installable. You can save compounds on this device with no account.
+**What you do next:** Build the stack checker from plan 007. `#66`
 
 _Last updated: 2026-08-30. Read this, then [AGENTS.md](AGENTS.md) and the `docs/` suite._
 
@@ -12,7 +12,7 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. Public nam
 
 ## Where we are
 
-**Phase 1 Honest catalog is in the app.** Phase 2 search, flags, comparison, and stamps are on `main`. Loop: `docs/loops/INDEX-phase-1.md`.
+**Phase 1 Honest catalog is in the app.** Phase 2 search, flags, comparison, and stamps are on `main`. Phase 3 PWA saves and the research loop are on `main`. Loop: `docs/loops/INDEX-phase-1.md`.
 
 | Board item | State |
 | --- | --- |
@@ -23,7 +23,7 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. Public nam
 | **EP-04 Legal and athlete flags** | Flags on compound pages (plan 001). Stories `#9` `#10` `#11` `#13` `#15` `#18` `#21`. |
 | **EP-05 Search, browse, last-verified** | Search, chips, and Checked stamps are on `main` (plan 002). |
 | **EP-07 Agent research workflow** | Readme loop, bans, and grade-review checklist are on `main` (`#58` `#59` `#61` `#62` `#63` `#64`). |
-| **EP-06 PWA and device-local saves** | Plan ready: [2026-08-30-006](docs/plans/2026-08-30-006-feat-pwa-and-device-saves-plan.md). |
+| **EP-06 PWA and device-local saves** | Manifest, offline banner, and device saves are on `main` (`#65` `#67` `#69` `#71` `#73` `#75`). |
 | **EP-08 Stacks** | Phase 4 plan: [2026-08-30-007](docs/plans/2026-08-30-007-feat-stack-checker-and-named-stacks-plan.md). F-20 helper: [2026-08-30-008](docs/plans/2026-08-30-008-feat-research-arithmetic-helper-plan.md). |
 | **EP-09 Accounts and native wrapper** | Plan ready: [2026-08-30-009](docs/plans/2026-08-30-009-feat-accounts-and-native-wrapper-plan.md). Native unit waits for EP-06. |
 | **Phase 2 to Phase 5** | How-to lives in `docs/plans/`. Sequence still [docs/ROADMAP.md](docs/ROADMAP.md). |
@@ -51,7 +51,7 @@ Needs Ruby 3.4.9 (rbenv) and local PostgreSQL. `DB_HOST` is only for the contrib
 
 ## What you do next
 
-1. Open `data/README.md` and add the next compound from that file alone.
-2. Make the catalog installable as a home-screen app from plan 006 (`#65`).
+1. Open a compound page, save it, then read Saved on this device.
+2. Build the stack checker from plan 007 (`#66`).
 
 Tracker: this file plus GitHub issues and milestones. Do not invent private IDs.

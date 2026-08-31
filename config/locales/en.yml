@@ -1,10 +1,20 @@
 en:
   app:
     name: "Peptides research South Africa"
+    short_name: "SA catalog"
+    description: "A South Africa catalog of peptides, nootropics, and local providers."
   nav:
     home: "Home"
     compounds: "Compounds"
     providers: "Providers"
+    saved: "Saved"
+  pwa:
+    stale: "This copy is cached and may be stale."
+  saved:
+    title: "Saved on this device"
+    empty: "No compounds are saved on this device. Clearing site data removes this list."
+    save: "Save on this device"
+    unsave: "Saved on this device"
   disclaimer:
     title: "This is a research catalog"
     body: "It is not medical advice. It is not legal advice. It is not an instruction to buy or use any product. Listing a provider is not an endorsement."

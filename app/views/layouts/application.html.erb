@@ -14,12 +14,17 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
+    <meta name="theme-color" content="#fafaf9">
+    <%= tag.link rel: "manifest", href: pwa_manifest_path(format: :json), id: "pwa-manifest" %>
 
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body class="min-h-screen bg-stone-50 text-stone-900">
+    <p id="offline-stale-banner" class="border-b border-stone-300 bg-stone-100 px-5 py-2 text-center text-sm" hidden role="status" data-controller="offline-banner">
+      <%= t("pwa.stale") %>
+    </p>
     <header class="border-b border-stone-200 bg-white">
       <div class="mx-auto flex max-w-4xl items-center justify-between gap-4 px-5 py-4">
         <%= link_to t("app.name"), root_path, id: "site-nav-home", class: "font-semibold" %>
@@ -27,6 +32,7 @@
           <ul class="flex gap-4">
             <li><%= link_to t("nav.compounds"), compounds_path, id: "site-nav-compounds" %></li>
             <li><%= link_to t("nav.providers"), providers_path, id: "site-nav-providers" %></li>
+            <li><%= link_to t("nav.saved"), saved_path, id: "site-nav-saved" %></li>
           </ul>
         </nav>
       </div>

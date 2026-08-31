@@ -12,6 +12,9 @@ class CatalogBrowseTest < ActionDispatch::IntegrationTest
     assert_select "#catalog-disclaimer-sahpra-link"
     assert_select "#site-nav-compounds"
     assert_select "#site-nav-providers"
+    assert_select "#site-nav-saved"
+    assert_select "#pwa-manifest"
+    assert_select "#offline-stale-banner[hidden]"
   end
 
   test "compound index lists name class routes and evidence grade" do

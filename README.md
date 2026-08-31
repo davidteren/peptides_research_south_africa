@@ -17,7 +17,7 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. It is not 
 ## Stack
 
 - Rails 8.1.3.1 · Ruby 3.4.9 · Hotwire (Turbo + Stimulus) · Solid Queue, Solid Cache, Solid Cable
-- PostgreSQL · Tailwind · importmap + Propshaft · PWA stubs (routes off until Phase 3)
+- PostgreSQL · Tailwind · importmap + Propshaft · Installable PWA with device-local saves
 - Docker present. Kamal is not in this repo yet.
 
 ## Getting started

@@ -163,12 +163,12 @@ This is a research catalog. It is not a clinic. It is not a pharmacy. No epic ma
 
 **Stories**
 
-1. Enable the installable home-screen app (manifest and service worker routes) — **S**
-2. Cache compound and provider pages for offline browse — **M**
-3. Show a "cached, may be stale" banner when the network is down — **S**
-4. Save and unsave compounds on this device; survive refresh — **M**
-5. Confirm that clearing site data loses the list, and that browse still works with no account — **S**
-6. Leave web push commented / off — **S**
+1. Enable the installable home-screen app (manifest and service worker routes) — **S**. On `main` (plan 2026-08-30-006).
+2. Cache compound and provider pages for offline browse — **M**. On `main` (plan 2026-08-30-006).
+3. Show a "cached, may be stale" banner when the network is down — **S**. On `main` (plan 2026-08-30-006).
+4. Save and unsave compounds on this device; survive refresh — **M**. On `main` (plan 2026-08-30-006).
+5. Confirm that clearing site data loses the list, and that browse still works with no account — **S**. On `main` (plan 2026-08-30-006).
+6. Leave web push commented / off — **S**. On `main` (plan 2026-08-30-006).
 
 **Dependencies:** EP-02 and EP-03 (pages to cache and save). Better after EP-05 so cached browse includes filters, but not required.
 **Definition of done:** The app is installable. Offline browse of compound and provider pages works with a stale banner. Local save works without an account. No push. No server table for saves. Password tooling stays unused.
@@ -330,6 +330,7 @@ Afrikaans and isiZulu are later, not a first-release goal.
 
 ## Changelog
 
+- 2026-08-31: EP-06 PWA and device-local saves landed on `main` (plan 2026-08-30-006).
 - 2026-08-30: EP-07 operator loop landed: catalog readme, bans, live merge-check pointer, and grade-review checklist (plan 2026-08-30-005).
 - 2026-08-30: Comparison table (F-9) and COA-stated flag UI (F-11) landed on `main` (plan 2026-08-30-004).
 - 2026-08-25: EP-03 phase exception: comparison table (F-9) and COA-stated flag UI (F-11) wait for Phase 2; provider and product pages stay Phase 1.

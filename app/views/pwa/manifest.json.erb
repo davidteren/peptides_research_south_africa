@@ -1,5 +1,6 @@
 {
-  "name": "PeptidesResearchSouthAfrica",
+  "name": <%= t("app.name").to_json.html_safe %>,
+  "short_name": <%= t("app.short_name").to_json.html_safe %>,
   "icons": [
     {
       "src": "/icon.png",
@@ -16,7 +17,7 @@
   "start_url": "/",
   "display": "standalone",
   "scope": "/",
-  "description": "PeptidesResearchSouthAfrica.",
-  "theme_color": "red",
-  "background_color": "red"
+  "description": <%= t("app.description").to_json.html_safe %>,
+  "theme_color": "#fafaf9",
+  "background_color": "#fafaf9"
 }
